@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C613EDD1B5AD490001C0F23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613EDC1B5AD490001C0F23 /* main.m */; };
-		6C613EE01B5AD490001C0F23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613EDF1B5AD490001C0F23 /* AppDelegate.m */; };
-		6C613EE31B5AD490001C0F23 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613EE21B5AD490001C0F23 /* ViewController.m */; };
-		6C613EE61B5AD490001C0F23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C613EE41B5AD490001C0F23 /* Main.storyboard */; };
-		6C613EE81B5AD490001C0F23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C613EE71B5AD490001C0F23 /* Images.xcassets */; };
-		6C613EEB1B5AD490001C0F23 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C613EE91B5AD490001C0F23 /* LaunchScreen.xib */; };
+		6C613EE01B5AD490001C0F23 /* TENAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613EDF1B5AD490001C0F23 /* TENAppDelegate.m */; };
 		6C613EF71B5AD490001C0F23 /* _44tenFBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613EF61B5AD490001C0F23 /* _44tenFBTests.m */; };
+		6C613F021B5AD709001C0F23 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C613F001B5AD709001C0F23 /* Info.plist */; };
+		6C613F031B5AD709001C0F23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613F011B5AD709001C0F23 /* main.m */; };
+		6C613F081B5AD715001C0F23 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C613F051B5AD715001C0F23 /* LaunchScreen.xib */; };
+		6C613F091B5AD715001C0F23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C613F071B5AD715001C0F23 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,18 +27,15 @@
 
 /* Begin PBXFileReference section */
 		6C613ED71B5AD490001C0F23 /* 444tenFB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 444tenFB.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C613EDB1B5AD490001C0F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6C613EDC1B5AD490001C0F23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6C613EDE1B5AD490001C0F23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6C613EDF1B5AD490001C0F23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6C613EE11B5AD490001C0F23 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6C613EE21B5AD490001C0F23 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		6C613EE51B5AD490001C0F23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6C613EE71B5AD490001C0F23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6C613EEA1B5AD490001C0F23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6C613EDE1B5AD490001C0F23 /* TENAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TENAppDelegate.h; sourceTree = "<group>"; };
+		6C613EDF1B5AD490001C0F23 /* TENAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TENAppDelegate.m; sourceTree = "<group>"; };
 		6C613EF01B5AD490001C0F23 /* 444tenFBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 444tenFBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C613EF51B5AD490001C0F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C613EF61B5AD490001C0F23 /* _44tenFBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _44tenFBTests.m; sourceTree = "<group>"; };
+		6C613F001B5AD709001C0F23 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C613F011B5AD709001C0F23 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6C613F061B5AD715001C0F23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6C613F071B5AD715001C0F23 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +59,8 @@
 		6C613ECE1B5AD490001C0F23 = {
 			isa = PBXGroup;
 			children = (
+				6C613F0A1B5AD79F001C0F23 /* Source */,
+				6C613F041B5AD715001C0F23 /* Resources */,
 				6C613ED91B5AD490001C0F23 /* 444tenFB */,
 				6C613EF31B5AD490001C0F23 /* 444tenFBTests */,
 				6C613ED81B5AD490001C0F23 /* Products */,
@@ -81,25 +79,12 @@
 		6C613ED91B5AD490001C0F23 /* 444tenFB */ = {
 			isa = PBXGroup;
 			children = (
-				6C613EDE1B5AD490001C0F23 /* AppDelegate.h */,
-				6C613EDF1B5AD490001C0F23 /* AppDelegate.m */,
-				6C613EE11B5AD490001C0F23 /* ViewController.h */,
-				6C613EE21B5AD490001C0F23 /* ViewController.m */,
-				6C613EE41B5AD490001C0F23 /* Main.storyboard */,
-				6C613EE71B5AD490001C0F23 /* Images.xcassets */,
-				6C613EE91B5AD490001C0F23 /* LaunchScreen.xib */,
-				6C613EDA1B5AD490001C0F23 /* Supporting Files */,
+				6C613EDE1B5AD490001C0F23 /* TENAppDelegate.h */,
+				6C613EDF1B5AD490001C0F23 /* TENAppDelegate.m */,
+				6C613F001B5AD709001C0F23 /* Info.plist */,
+				6C613F011B5AD709001C0F23 /* main.m */,
 			);
 			path = 444tenFB;
-			sourceTree = "<group>";
-		};
-		6C613EDA1B5AD490001C0F23 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6C613EDB1B5AD490001C0F23 /* Info.plist */,
-				6C613EDC1B5AD490001C0F23 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		6C613EF31B5AD490001C0F23 /* 444tenFBTests */ = {
@@ -117,6 +102,64 @@
 				6C613EF51B5AD490001C0F23 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C613F041B5AD715001C0F23 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6C613F051B5AD715001C0F23 /* LaunchScreen.xib */,
+				6C613F071B5AD715001C0F23 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6C613F0A1B5AD79F001C0F23 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6C613F0B1B5AD79F001C0F23 /* Library */,
+				6C613F0C1B5AD79F001C0F23 /* Models */,
+				6C613F0D1B5AD79F001C0F23 /* UI */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		6C613F0B1B5AD79F001C0F23 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				6C613F0E1B5AD79F001C0F23 /* Categories */,
+				6C613F0F1B5AD79F001C0F23 /* Classes */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		6C613F0C1B5AD79F001C0F23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6C613F0D1B5AD79F001C0F23 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6C613F0E1B5AD79F001C0F23 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categories;
+			path = ../UI/Categories;
+			sourceTree = "<group>";
+		};
+		6C613F0F1B5AD79F001C0F23 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			path = ../UI/Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +242,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C613EE61B5AD490001C0F23 /* Main.storyboard in Resources */,
-				6C613EEB1B5AD490001C0F23 /* LaunchScreen.xib in Resources */,
-				6C613EE81B5AD490001C0F23 /* Images.xcassets in Resources */,
+				6C613F091B5AD715001C0F23 /* Images.xcassets in Resources */,
+				6C613F081B5AD715001C0F23 /* LaunchScreen.xib in Resources */,
+				6C613F021B5AD709001C0F23 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C613EE31B5AD490001C0F23 /* ViewController.m in Sources */,
-				6C613EE01B5AD490001C0F23 /* AppDelegate.m in Sources */,
-				6C613EDD1B5AD490001C0F23 /* main.m in Sources */,
+				6C613F031B5AD709001C0F23 /* main.m in Sources */,
+				6C613EE01B5AD490001C0F23 /* TENAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,18 +286,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6C613EE41B5AD490001C0F23 /* Main.storyboard */ = {
+		6C613F051B5AD715001C0F23 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6C613EE51B5AD490001C0F23 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6C613EE91B5AD490001C0F23 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6C613EEA1B5AD490001C0F23 /* Base */,
+				6C613F061B5AD715001C0F23 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

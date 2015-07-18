@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TENAppDelegate.h
 //  444tenFB
 //
 //  Created by Andrey Ten on 7/18/15.
@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface TENAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 
 @end
