@@ -22,6 +22,9 @@
 		6C613F331B5AD8BB001C0F23 /* UIView+TENExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613F261B5AD8BB001C0F23 /* UIView+TENExtensions.m */; };
 		6C613F341B5AD8BB001C0F23 /* UIViewController+TENExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613F291B5AD8BB001C0F23 /* UIViewController+TENExtensions.m */; };
 		6C613F351B5AD8BB001C0F23 /* UIWindow+TENExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613F2C1B5AD8BB001C0F23 /* UIWindow+TENExtensions.m */; };
+		6C613F391B5AD93E001C0F23 /* TENChangedPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613F381B5AD93E001C0F23 /* TENChangedPath.m */; };
+		6C613F3E1B5ADAAD001C0F23 /* TENTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613F3C1B5ADAAD001C0F23 /* TENTestViewController.m */; };
+		6C613F3F1B5ADAAD001C0F23 /* TENTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C613F3D1B5ADAAD001C0F23 /* TENTestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,11 @@
 		6C613F291B5AD8BB001C0F23 /* UIViewController+TENExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TENExtensions.m"; sourceTree = "<group>"; };
 		6C613F2B1B5AD8BB001C0F23 /* UIWindow+TENExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+TENExtensions.h"; sourceTree = "<group>"; };
 		6C613F2C1B5AD8BB001C0F23 /* UIWindow+TENExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TENExtensions.m"; sourceTree = "<group>"; };
+		6C613F371B5AD93E001C0F23 /* TENChangedPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENChangedPath.h; sourceTree = "<group>"; };
+		6C613F381B5AD93E001C0F23 /* TENChangedPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENChangedPath.m; sourceTree = "<group>"; };
+		6C613F3B1B5ADAAD001C0F23 /* TENTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENTestViewController.h; sourceTree = "<group>"; };
+		6C613F3C1B5ADAAD001C0F23 /* TENTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENTestViewController.m; sourceTree = "<group>"; };
+		6C613F3D1B5ADAAD001C0F23 /* TENTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TENTestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +177,7 @@
 		6C613F0D1B5AD79F001C0F23 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				6C613F3A1B5ADAAD001C0F23 /* TENTestViewController */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -192,6 +201,7 @@
 		6C613F111B5AD89D001C0F23 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6C613F361B5AD93E001C0F23 /* TENChangedPath */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -277,6 +287,25 @@
 			path = "UIWindow+TENExtensions";
 			sourceTree = "<group>";
 		};
+		6C613F361B5AD93E001C0F23 /* TENChangedPath */ = {
+			isa = PBXGroup;
+			children = (
+				6C613F371B5AD93E001C0F23 /* TENChangedPath.h */,
+				6C613F381B5AD93E001C0F23 /* TENChangedPath.m */,
+			);
+			path = TENChangedPath;
+			sourceTree = "<group>";
+		};
+		6C613F3A1B5ADAAD001C0F23 /* TENTestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6C613F3B1B5ADAAD001C0F23 /* TENTestViewController.h */,
+				6C613F3C1B5ADAAD001C0F23 /* TENTestViewController.m */,
+				6C613F3D1B5ADAAD001C0F23 /* TENTestViewController.xib */,
+			);
+			path = TENTestViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C613F3F1B5ADAAD001C0F23 /* TENTestViewController.xib in Resources */,
 				6C613F091B5AD715001C0F23 /* Images.xcassets in Resources */,
 				6C613F081B5AD715001C0F23 /* LaunchScreen.xib in Resources */,
 				6C613F021B5AD709001C0F23 /* Info.plist in Resources */,
@@ -380,8 +410,10 @@
 				6C613F2F1B5AD8BB001C0F23 /* NSMutableArray+TENExtensions.m in Sources */,
 				6C613F321B5AD8BB001C0F23 /* UITableView+TENExtensions.m in Sources */,
 				6C613F341B5AD8BB001C0F23 /* UIViewController+TENExtensions.m in Sources */,
+				6C613F3E1B5ADAAD001C0F23 /* TENTestViewController.m in Sources */,
 				6C613F2D1B5AD8BB001C0F23 /* NSBundle+TENExtensions.m in Sources */,
 				6C613F031B5AD709001C0F23 /* main.m in Sources */,
+				6C613F391B5AD93E001C0F23 /* TENChangedPath.m in Sources */,
 				6C613F351B5AD8BB001C0F23 /* UIWindow+TENExtensions.m in Sources */,
 				6C613F2E1B5AD8BB001C0F23 /* NSFileManager+TENExtensions.m in Sources */,
 				6C613F331B5AD8BB001C0F23 /* UIView+TENExtensions.m in Sources */,
@@ -574,6 +606,7 @@
 				6C613EFC1B5AD490001C0F23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C613EFD1B5AD490001C0F23 /* Build configuration list for PBXNativeTarget "444tenFBTests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +615,7 @@
 				6C613EFF1B5AD490001C0F23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
