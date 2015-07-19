@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6C613EE01B5AD490001C0F23 /* TENAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613EDF1B5AD490001C0F23 /* TENAppDelegate.m */; };
-		6C613EF71B5AD490001C0F23 /* _44tenFBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613EF61B5AD490001C0F23 /* _44tenFBTests.m */; };
-		6C613F021B5AD709001C0F23 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C613F001B5AD709001C0F23 /* Info.plist */; };
 		6C613F031B5AD709001C0F23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613F011B5AD709001C0F23 /* main.m */; };
 		6C613F081B5AD715001C0F23 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C613F051B5AD715001C0F23 /* LaunchScreen.xib */; };
 		6C613F091B5AD715001C0F23 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C613F071B5AD715001C0F23 /* Images.xcassets */; };
@@ -43,7 +41,6 @@
 		6C613EDF1B5AD490001C0F23 /* TENAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TENAppDelegate.m; sourceTree = "<group>"; };
 		6C613EF01B5AD490001C0F23 /* 444tenFBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 444tenFBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C613EF51B5AD490001C0F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6C613EF61B5AD490001C0F23 /* _44tenFBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _44tenFBTests.m; sourceTree = "<group>"; };
 		6C613F001B5AD709001C0F23 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C613F011B5AD709001C0F23 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C613F061B5AD715001C0F23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -125,7 +122,6 @@
 		6C613EF31B5AD490001C0F23 /* 444tenFBTests */ = {
 			isa = PBXGroup;
 			children = (
-				6C613EF61B5AD490001C0F23 /* _44tenFBTests.m */,
 				6C613EF41B5AD490001C0F23 /* Supporting Files */,
 			);
 			path = 444tenFBTests;
@@ -355,6 +351,11 @@
 				TargetAttributes = {
 					6C613ED61B5AD490001C0F23 = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					6C613EEF1B5AD490001C0F23 = {
 						CreatedOnToolsVersion = 6.4;
@@ -389,7 +390,6 @@
 				6C613F3F1B5ADAAD001C0F23 /* TENTestViewController.xib in Resources */,
 				6C613F091B5AD715001C0F23 /* Images.xcassets in Resources */,
 				6C613F081B5AD715001C0F23 /* LaunchScreen.xib in Resources */,
-				6C613F021B5AD709001C0F23 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +427,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C613EF71B5AD490001C0F23 /* _44tenFBTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
