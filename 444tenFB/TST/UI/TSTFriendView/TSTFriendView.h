@@ -11,6 +11,7 @@
 @class TSTImageModel;
 
 @interface TSTFriendView : UIView
-@property (nonatomic, strong)   TSTImageModel   *imageModel;
+@property (nonatomic, strong)   IBOutlet UIImageView    *contentImageView;
+@property (nonatomic, strong)   TSTImageModel           *imageModel;
 
 @end

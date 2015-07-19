@@ -9,7 +9,6 @@
 #import "TSTFriendView.h"
 
 @interface TSTFriendView ()
-@property (nonatomic, strong)   UIImageView     *imageView;
 
 - (void)initSubviews;
 
@@ -21,7 +20,7 @@
 #pragma mark Initializations and Deallocation
 
 - (void)dealloc {
-    
+    self.contentImageView = nil;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)coder{
@@ -33,33 +32,43 @@
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    if (!self.contentImageView) {
         [self initSubviews];
     }
-    
-    return self;
+}
+
+#pragma mark -
+#pragma mark Accessors
+
+- (void)setContentImageView:(UIImageView *)contentImageView {
+    if (contentImageView != _contentImageView) {
+        [_contentImageView removeFromSuperview];
+        
+        _contentImageView = contentImageView;
+        [self addSubview:_contentImageView];
+    }
 }
 
 #pragma mark -
 #pragma mark View Lifecycle
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    
-    self.imageView.frame = self.bounds;
-}
 
 #pragma mark -
 #pragma mark Private
 
 - (void)initSubviews {
-    UIImageView *imageView = [UIImageView new];
-    self.imageView = imageView;
-    [self addSubview:imageView];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    imageView.autoresizingMask  = UIViewAutoresizingFlexibleBottomMargin
+                                | UIViewAutoresizingFlexibleTopMargin
+                                | UIViewAutoresizingFlexibleLeftMargin
+                                | UIViewAutoresizingFlexibleRightMargin
+                                | UIViewAutoresizingFlexibleHeight
+                                | UIViewAutoresizingFlexibleWidth;
     
-    [self setNeedsLayout];
+    self.contentImageView = imageView;
 }
 
 @end
