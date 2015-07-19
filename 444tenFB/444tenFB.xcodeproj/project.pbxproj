@@ -23,6 +23,10 @@
 		6C613F391B5AD93E001C0F23 /* TENChangedPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613F381B5AD93E001C0F23 /* TENChangedPath.m */; };
 		6C613F3E1B5ADAAD001C0F23 /* TENTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613F3C1B5ADAAD001C0F23 /* TENTestViewController.m */; };
 		6C613F3F1B5ADAAD001C0F23 /* TENTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C613F3D1B5ADAAD001C0F23 /* TENTestViewController.xib */; };
+		6C613FA01B5BE776001C0F23 /* TSTImageModelDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613F9C1B5BE776001C0F23 /* TSTImageModelDispatcher.m */; };
+		6C613FA11B5BE776001C0F23 /* TSTImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613F9E1B5BE776001C0F23 /* TSTImageModel.m */; };
+		6C613FA51B5BE7F2001C0F23 /* TENObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FA41B5BE7F2001C0F23 /* TENObservableObject.m */; };
+		6C613FA81B5BE861001C0F23 /* TENMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FA71B5BE861001C0F23 /* TENMacro.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,14 @@
 		6C613F3B1B5ADAAD001C0F23 /* TENTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENTestViewController.h; sourceTree = "<group>"; };
 		6C613F3C1B5ADAAD001C0F23 /* TENTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENTestViewController.m; sourceTree = "<group>"; };
 		6C613F3D1B5ADAAD001C0F23 /* TENTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TENTestViewController.xib; sourceTree = "<group>"; };
+		6C613F9B1B5BE776001C0F23 /* TSTImageModelDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTImageModelDispatcher.h; sourceTree = "<group>"; };
+		6C613F9C1B5BE776001C0F23 /* TSTImageModelDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTImageModelDispatcher.m; sourceTree = "<group>"; };
+		6C613F9D1B5BE776001C0F23 /* TSTImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTImageModel.h; sourceTree = "<group>"; };
+		6C613F9E1B5BE776001C0F23 /* TSTImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTImageModel.m; sourceTree = "<group>"; };
+		6C613FA31B5BE7F2001C0F23 /* TENObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENObservableObject.h; sourceTree = "<group>"; };
+		6C613FA41B5BE7F2001C0F23 /* TENObservableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENObservableObject.m; sourceTree = "<group>"; };
+		6C613FA61B5BE861001C0F23 /* TENMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENMacro.h; sourceTree = "<group>"; };
+		6C613FA71B5BE861001C0F23 /* TENMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENMacro.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +108,7 @@
 				6C613ED91B5AD490001C0F23 /* 444tenFB */,
 				6C613EF31B5AD490001C0F23 /* 444tenFBTests */,
 				6C613ED81B5AD490001C0F23 /* Products */,
+				6C613F971B5BE776001C0F23 /* TST */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +172,8 @@
 			children = (
 				6C613F101B5AD89D001C0F23 /* Categories */,
 				6C613F111B5AD89D001C0F23 /* Classes */,
+				6C613FA61B5BE861001C0F23 /* TENMacro.h */,
+				6C613FA71B5BE861001C0F23 /* TENMacro.m */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -198,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				6C613F361B5AD93E001C0F23 /* TENChangedPath */,
+				6C613FA21B5BE7F2001C0F23 /* TENObservableObject */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -300,6 +316,58 @@
 				6C613F3D1B5ADAAD001C0F23 /* TENTestViewController.xib */,
 			);
 			path = TENTestViewController;
+			sourceTree = "<group>";
+		};
+		6C613F971B5BE776001C0F23 /* TST */ = {
+			isa = PBXGroup;
+			children = (
+				6C613F981B5BE776001C0F23 /* Models */,
+				6C613F9F1B5BE776001C0F23 /* UI */,
+			);
+			path = TST;
+			sourceTree = "<group>";
+		};
+		6C613F981B5BE776001C0F23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6C613F991B5BE776001C0F23 /* TSTImageModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6C613F991B5BE776001C0F23 /* TSTImageModel */ = {
+			isa = PBXGroup;
+			children = (
+				6C613F9A1B5BE776001C0F23 /* Private */,
+				6C613F9D1B5BE776001C0F23 /* TSTImageModel.h */,
+				6C613F9E1B5BE776001C0F23 /* TSTImageModel.m */,
+			);
+			path = TSTImageModel;
+			sourceTree = "<group>";
+		};
+		6C613F9A1B5BE776001C0F23 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				6C613F9B1B5BE776001C0F23 /* TSTImageModelDispatcher.h */,
+				6C613F9C1B5BE776001C0F23 /* TSTImageModelDispatcher.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		6C613F9F1B5BE776001C0F23 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6C613FA21B5BE7F2001C0F23 /* TENObservableObject */ = {
+			isa = PBXGroup;
+			children = (
+				6C613FA31B5BE7F2001C0F23 /* TENObservableObject.h */,
+				6C613FA41B5BE7F2001C0F23 /* TENObservableObject.m */,
+			);
+			path = TENObservableObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,12 +478,16 @@
 				6C613F2F1B5AD8BB001C0F23 /* NSMutableArray+TENExtensions.m in Sources */,
 				6C613F321B5AD8BB001C0F23 /* UITableView+TENExtensions.m in Sources */,
 				6C613F341B5AD8BB001C0F23 /* UIViewController+TENExtensions.m in Sources */,
+				6C613FA51B5BE7F2001C0F23 /* TENObservableObject.m in Sources */,
+				6C613FA81B5BE861001C0F23 /* TENMacro.m in Sources */,
 				6C613F3E1B5ADAAD001C0F23 /* TENTestViewController.m in Sources */,
 				6C613F2D1B5AD8BB001C0F23 /* NSBundle+TENExtensions.m in Sources */,
 				6C613F031B5AD709001C0F23 /* main.m in Sources */,
 				6C613F391B5AD93E001C0F23 /* TENChangedPath.m in Sources */,
 				6C613F351B5AD8BB001C0F23 /* UIWindow+TENExtensions.m in Sources */,
 				6C613F2E1B5AD8BB001C0F23 /* NSFileManager+TENExtensions.m in Sources */,
+				6C613FA01B5BE776001C0F23 /* TSTImageModelDispatcher.m in Sources */,
+				6C613FA11B5BE776001C0F23 /* TSTImageModel.m in Sources */,
 				6C613F331B5AD8BB001C0F23 /* UIView+TENExtensions.m in Sources */,
 				6C613EE01B5AD490001C0F23 /* TENAppDelegate.m in Sources */,
 				6C613F301B5AD8BB001C0F23 /* NSURLSession+TENExtensions.m in Sources */,
