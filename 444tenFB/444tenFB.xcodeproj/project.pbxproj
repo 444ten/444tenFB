@@ -27,6 +27,7 @@
 		6C613FA11B5BE776001C0F23 /* TSTImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613F9E1B5BE776001C0F23 /* TSTImageModel.m */; };
 		6C613FA51B5BE7F2001C0F23 /* TENObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FA41B5BE7F2001C0F23 /* TENObservableObject.m */; };
 		6C613FA81B5BE861001C0F23 /* TENMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FA71B5BE861001C0F23 /* TENMacro.m */; };
+		6C613FAC1B5C0028001C0F23 /* TSTFriendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FAB1B5C0028001C0F23 /* TSTFriendView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		6C613FA41B5BE7F2001C0F23 /* TENObservableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENObservableObject.m; sourceTree = "<group>"; };
 		6C613FA61B5BE861001C0F23 /* TENMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENMacro.h; sourceTree = "<group>"; };
 		6C613FA71B5BE861001C0F23 /* TENMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENMacro.m; sourceTree = "<group>"; };
+		6C613FAA1B5C0028001C0F23 /* TSTFriendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTFriendView.h; sourceTree = "<group>"; };
+		6C613FAB1B5C0028001C0F23 /* TSTFriendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTFriendView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +360,7 @@
 		6C613F9F1B5BE776001C0F23 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				6C613FA91B5C0017001C0F23 /* TSTFriendView */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -368,6 +372,15 @@
 				6C613FA41B5BE7F2001C0F23 /* TENObservableObject.m */,
 			);
 			path = TENObservableObject;
+			sourceTree = "<group>";
+		};
+		6C613FA91B5C0017001C0F23 /* TSTFriendView */ = {
+			isa = PBXGroup;
+			children = (
+				6C613FAA1B5C0028001C0F23 /* TSTFriendView.h */,
+				6C613FAB1B5C0028001C0F23 /* TSTFriendView.m */,
+			);
+			path = TSTFriendView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,6 +502,7 @@
 				6C613FA01B5BE776001C0F23 /* TSTImageModelDispatcher.m in Sources */,
 				6C613FA11B5BE776001C0F23 /* TSTImageModel.m in Sources */,
 				6C613F331B5AD8BB001C0F23 /* UIView+TENExtensions.m in Sources */,
+				6C613FAC1B5C0028001C0F23 /* TSTFriendView.m in Sources */,
 				6C613EE01B5AD490001C0F23 /* TENAppDelegate.m in Sources */,
 				6C613F301B5AD8BB001C0F23 /* NSURLSession+TENExtensions.m in Sources */,
 				6C613F311B5AD8BB001C0F23 /* UINib+TENExtensions.m in Sources */,
