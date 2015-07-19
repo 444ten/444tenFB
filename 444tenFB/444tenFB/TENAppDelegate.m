@@ -8,10 +8,13 @@
 
 #import "TENAppDelegate.h"
 
+#import "TENTestViewController.h"
+
+#import "TSTFriendView.h"
+
+#import "UINib+TENExtensions.h"
 #import "UIViewController+TENExtensions.h"
 #import "UIWindow+TENExtensions.h"
-
-#import "TENTestViewController.h"
 
 @interface TENAppDelegate ()
 
@@ -25,6 +28,12 @@
     self.window = window;
 
     TENTestViewController *controller = [TENTestViewController controller];
+    
+//    TSTFriendView *friendView = [UINib objectWithClass:[TSTFriendView class]];
+    TSTFriendView *friendView = [TSTFriendView new];
+    friendView.backgroundColor = [UIColor yellowColor];
+    
+    controller.view = friendView;
     
     window.rootViewController = controller;
     [window makeKeyAndVisible];

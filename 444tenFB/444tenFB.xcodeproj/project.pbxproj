@@ -28,6 +28,7 @@
 		6C613FA51B5BE7F2001C0F23 /* TENObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FA41B5BE7F2001C0F23 /* TENObservableObject.m */; };
 		6C613FA81B5BE861001C0F23 /* TENMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FA71B5BE861001C0F23 /* TENMacro.m */; };
 		6C613FAC1B5C0028001C0F23 /* TSTFriendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FAB1B5C0028001C0F23 /* TSTFriendView.m */; };
+		6C613FAE1B5C040F001C0F23 /* TSTFriendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C613FAD1B5C040F001C0F23 /* TSTFriendView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		6C613FA71B5BE861001C0F23 /* TENMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENMacro.m; sourceTree = "<group>"; };
 		6C613FAA1B5C0028001C0F23 /* TSTFriendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTFriendView.h; sourceTree = "<group>"; };
 		6C613FAB1B5C0028001C0F23 /* TSTFriendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTFriendView.m; sourceTree = "<group>"; };
+		6C613FAD1B5C040F001C0F23 /* TSTFriendView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TSTFriendView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +381,7 @@
 			children = (
 				6C613FAA1B5C0028001C0F23 /* TSTFriendView.h */,
 				6C613FAB1B5C0028001C0F23 /* TSTFriendView.m */,
+				6C613FAD1B5C040F001C0F23 /* TSTFriendView.xib */,
 			);
 			path = TSTFriendView;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C613FAE1B5C040F001C0F23 /* TSTFriendView.xib in Resources */,
 				6C613F3F1B5ADAAD001C0F23 /* TENTestViewController.xib in Resources */,
 				6C613F091B5AD715001C0F23 /* Images.xcassets in Resources */,
 				6C613F081B5AD715001C0F23 /* LaunchScreen.xib in Resources */,

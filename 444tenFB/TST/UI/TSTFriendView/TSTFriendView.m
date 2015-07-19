@@ -8,14 +8,58 @@
 
 #import "TSTFriendView.h"
 
+@interface TSTFriendView ()
+@property (nonatomic, strong)   UIImageView     *imageView;
+
+- (void)initSubviews;
+
+@end
+
 @implementation TSTFriendView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+#pragma mark -
+#pragma mark Initializations and Deallocation
+
+- (void)dealloc {
+    
 }
-*/
+
+- (instancetype)initWithCoder:(NSCoder *)coder{
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self initSubviews];
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self initSubviews];
+    }
+    
+    return self;
+}
+
+#pragma mark -
+#pragma mark View Lifecycle
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    self.imageView.frame = self.bounds;
+}
+
+#pragma mark -
+#pragma mark Private
+
+- (void)initSubviews {
+    UIImageView *imageView = [UIImageView new];
+    self.imageView = imageView;
+    [self addSubview:imageView];
+    
+    [self setNeedsLayout];
+}
 
 @end

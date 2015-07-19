@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class TSTImageModel;
+
 @interface TSTFriendView : UIView
+@property (nonatomic, strong)   TSTImageModel   *imageModel;
 
 @end
