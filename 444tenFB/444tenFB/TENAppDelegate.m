@@ -8,6 +8,8 @@
 
 #import "TENAppDelegate.h"
 
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+
 #import "TENTestViewController.h"
 
 #import "TSTFriendView.h"
@@ -30,15 +32,17 @@
     TENTestViewController *controller = [TENTestViewController controller];
     
 //    TSTFriendView *friendView = [UINib objectWithClass:[TSTFriendView class]];
-    TSTFriendView *friendView = [TSTFriendView new];
-    friendView.backgroundColor = [UIColor yellowColor];
-    
-    controller.view = friendView;
+//    TSTFriendView *friendView = [TSTFriendView new];
+//    friendView.backgroundColor = [UIColor yellowColor];
+//    
+//    controller.view = friendView;
     
     window.rootViewController = controller;
     [window makeKeyAndVisible];
     
-    return YES;
+//    return YES;
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                    didFinishLaunchingWithOptions:launchOptions];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -54,11 +58,21 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-
+    [FBSDKAppEvents activateApp];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
 
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
 }
 
 @end

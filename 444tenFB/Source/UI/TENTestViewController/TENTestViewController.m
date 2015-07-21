@@ -8,7 +8,45 @@
 
 #import "TENTestViewController.h"
 
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+
+#import "TENLoginContext.h"
+
+@interface TENTestViewController () <FBSDKLoginButtonDelegate>
+
+@end
+
 @implementation TENTestViewController 
 
+#pragma mark -
+#pragma mark View Lifecycle
+
+- (void)viewDidLoad {
+    
+    TENLoginContext *loginContext = [TENLoginContext new];
+    [loginContext execute];
+    
+    
+//    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+//    loginButton.center = self.view.center;
+//    loginButton.delegate = self;
+//    
+//    [self.view addSubview:loginButton];
+}
+
+
+#pragma mark -
+#pragma mark FBSDKLoginButtonDelegate
+
+- (void)  loginButton:(FBSDKLoginButton *)loginButton
+didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
+                error:(NSError *)error {
+    
+}
+
+- (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton {
+    
+}
 
 @end
