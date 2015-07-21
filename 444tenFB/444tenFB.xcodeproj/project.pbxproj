@@ -28,6 +28,7 @@
 		6C613FA51B5BE7F2001C0F23 /* TENObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FA41B5BE7F2001C0F23 /* TENObservableObject.m */; };
 		6C613FA81B5BE861001C0F23 /* TENMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FA71B5BE861001C0F23 /* TENMacro.m */; };
 		6C613FAC1B5C0028001C0F23 /* TSTFriendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FAB1B5C0028001C0F23 /* TSTFriendView.m */; };
+		E9DAB54A61E2FDFFCF46A2A3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B09605898B49FD20C0C78A3B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03BF4AE552D78A67CEBAC699 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6C613ED71B5AD490001C0F23 /* 444tenFB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 444tenFB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C613EDE1B5AD490001C0F23 /* TENAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TENAppDelegate.h; sourceTree = "<group>"; };
 		6C613EDF1B5AD490001C0F23 /* TENAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TENAppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +85,8 @@
 		6C613FA71B5BE861001C0F23 /* TENMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENMacro.m; sourceTree = "<group>"; };
 		6C613FAA1B5C0028001C0F23 /* TSTFriendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTFriendView.h; sourceTree = "<group>"; };
 		6C613FAB1B5C0028001C0F23 /* TSTFriendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTFriendView.m; sourceTree = "<group>"; };
+		99F80E15D91D3AFD99A641FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B09605898B49FD20C0C78A3B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9DAB54A61E2FDFFCF46A2A3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,8 @@
 				6C613EF31B5AD490001C0F23 /* 444tenFBTests */,
 				6C613ED81B5AD490001C0F23 /* Products */,
 				6C613F971B5BE776001C0F23 /* TST */,
+				B3FDAE5010273AB229F41B35 /* Pods */,
+				8CBA02FE8C497FE6CED50C45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -383,6 +390,23 @@
 			path = TSTFriendView;
 			sourceTree = "<group>";
 		};
+		8CBA02FE8C497FE6CED50C45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B09605898B49FD20C0C78A3B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3FDAE5010273AB229F41B35 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03BF4AE552D78A67CEBAC699 /* Pods.debug.xcconfig */,
+				99F80E15D91D3AFD99A641FA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -390,9 +414,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C613EFA1B5AD490001C0F23 /* Build configuration list for PBXNativeTarget "444tenFB" */;
 			buildPhases = (
+				BC59523F12192F0166DE8F62 /* Check Pods Manifest.lock */,
 				6C613ED31B5AD490001C0F23 /* Sources */,
 				6C613ED41B5AD490001C0F23 /* Frameworks */,
 				6C613ED51B5AD490001C0F23 /* Resources */,
+				AABB069E49DEC79C15F51789 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -482,6 +508,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AABB069E49DEC79C15F51789 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC59523F12192F0166DE8F62 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6C613ED31B5AD490001C0F23 /* Sources */ = {
@@ -620,6 +679,7 @@
 		};
 		6C613EFB1B5AD490001C0F23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03BF4AE552D78A67CEBAC699 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 444tenFB/Info.plist;
@@ -630,6 +690,7 @@
 		};
 		6C613EFC1B5AD490001C0F23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99F80E15D91D3AFD99A641FA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 444tenFB/Info.plist;

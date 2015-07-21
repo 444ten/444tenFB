@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 444ten. All rights reserved.
 //
 
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+
 #import "TSTFriendView.h"
 
 @interface TSTFriendView ()
