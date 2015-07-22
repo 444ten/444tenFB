@@ -9,9 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface TENLoginView : UIView
+@property (nonatomic, strong)   IBOutlet UILabel    *firstNameLabel;
+@property (nonatomic, strong)   IBOutlet UILabel    *lastNameLabel;
 @property (nonatomic, strong)   IBOutlet UIButton   *loginButton;
 
 - (void)setLoginConfiguration;
 - (void)setLogoutConfiguration;
+
+- (void)fillWithModel:(id)model;
 
 @end

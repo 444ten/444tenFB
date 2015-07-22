@@ -8,6 +8,8 @@
 
 #import "TENLoginView.h"
 
+#import "TENUser.h"
+
 static NSString * const kLogin  = @"Log in";
 static NSString * const kLogout = @"Log out";
 
@@ -22,6 +24,11 @@ static NSString * const kLogout = @"Log out";
 
 - (void)setLogoutConfiguration {
     [self.loginButton setTitle:kLogout forState:UIControlStateNormal];
+}
+
+- (void)fillWithModel:(TENUser *)model {
+    self.firstNameLabel.text = model.firstName;
+    self.lastNameLabel.text = model.lastName;
 }
 
 @end

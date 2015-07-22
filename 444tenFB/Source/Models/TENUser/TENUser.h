@@ -6,13 +6,12 @@
 //  Copyright (c) 2015 444ten. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TENModel.h"
 
-@interface TENUser : NSObject
+@interface TENUser : TENModel
 @property (nonatomic, strong)   NSString    *userID;
 @property (nonatomic, strong)   NSString    *firstName;
 @property (nonatomic, strong)   NSString    *lastName;
-
 @property (nonatomic, strong)   NSURL       *pictureUrl;
 
 @end

@@ -74,7 +74,7 @@
 }
 
 - (void)notify {
-    self.state = TENContextExecuted;
+    self.user.state = TENModelLoaded;
 }
 
 @end

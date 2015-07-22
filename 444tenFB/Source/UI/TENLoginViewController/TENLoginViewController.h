@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TENLoginViewController : UIViewController
+#import "TENUser.h"
+
+@interface TENLoginViewController : UIViewController <TENModelObserver>
 
 - (IBAction)onLoginButton:(id)sender;
 
