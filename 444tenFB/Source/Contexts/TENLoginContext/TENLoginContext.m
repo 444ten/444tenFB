@@ -11,6 +11,7 @@
 #import <FBSDKCoreKit.h>
 #import <FBSDKLoginKit.h>
 
+#import "TENMacro.h"
 #import "TENUser.h"
 
 @interface TENLoginContext ()
@@ -18,6 +19,7 @@
 
 - (void)loginAndPerformRequest;
 - (void)parsing;
+- (void)notify;
 
 @end
 
@@ -61,13 +63,18 @@
     TENUser *user = self.user;
     NSDictionary *result = self.result;
     
-    
     user.userID = [result objectForKey: @"id"];
     user.firstName = [result objectForKey: @"first_name"];
     user.lastName = [result objectForKey: @"last_name"];
     
     NSDictionary *dictionary = [[result objectForKey:@"picture"] objectForKey:@"data"];
     user.pictureUrl = [dictionary objectForKey: @"url"];
+    
+    [self notify];
+}
+
+- (void)notify {
+    self.state = TENContextExecuted;
 }
 
 @end

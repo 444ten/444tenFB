@@ -6,17 +6,14 @@
 //  Copyright (c) 2015 444ten. All rights reserved.
 //
 
-#import "TENAppDelegate.h"
-
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
-#import "TENTestViewController.h"
+#import "TENAppDelegate.h"
 
-#import "TSTFriendView.h"
-
-#import "UINib+TENExtensions.h"
 #import "UIViewController+TENExtensions.h"
 #import "UIWindow+TENExtensions.h"
+
+#import "TENLoginViewController.h"
 
 @interface TENAppDelegate ()
 
@@ -26,23 +23,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    BOOL result = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                           didFinishLaunchingWithOptions:launchOptions];
+    
     UIWindow *window = [UIWindow window];
     self.window = window;
 
-    TENTestViewController *controller = [TENTestViewController controller];
+    TENLoginViewController *controller = [TENLoginViewController controller];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
     
-//    TSTFriendView *friendView = [UINib objectWithClass:[TSTFriendView class]];
-//    TSTFriendView *friendView = [TSTFriendView new];
-//    friendView.backgroundColor = [UIColor yellowColor];
-//    
-//    controller.view = friendView;
-    
-    window.rootViewController = controller;
+    window.rootViewController = navigationController;
     [window makeKeyAndVisible];
     
-//    return YES;
-    return [[FBSDKApplicationDelegate sharedInstance] application:application
-                                    didFinishLaunchingWithOptions:launchOptions];
+    return result;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
