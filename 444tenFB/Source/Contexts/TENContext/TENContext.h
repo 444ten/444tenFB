@@ -8,6 +8,21 @@
 
 #import "TENObservableObject.h"
 
+typedef NS_ENUM(NSUInteger, TENContextState) {
+    TENContextCanceling,
+    TENContextExecuted,
+    TENContextDidFailExecuting
+};
+
+@protocol TENContextObserver
+
+@optional
+- (void)contextDidCancel:(id)context;
+- (void)contextDidExecute:(id)context;
+- (void)contextDidFailExecute:(id)context;
+
+@end
+
 @interface TENContext : TENObservableObject
 
 @end

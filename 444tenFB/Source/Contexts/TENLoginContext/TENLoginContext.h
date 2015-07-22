@@ -6,11 +6,12 @@
 //  Copyright (c) 2015 444ten. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "TENContext.h"
 
 @class TENUser;
 
-@interface TENLoginContext : NSObject
+@interface TENLoginContext : TENContext
+@property (nonatomic, strong)   TENUser *user;
 
 - (void)execute;
 

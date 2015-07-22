@@ -12,6 +12,7 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 #import "TENLoginContext.h"
+#import "TENUser.h"
 
 @interface TENTestViewController () <FBSDKLoginButtonDelegate>
 
@@ -23,8 +24,11 @@
 #pragma mark View Lifecycle
 
 - (void)viewDidLoad {
+    TENUser *user = [TENUser new];
     
     TENLoginContext *loginContext = [TENLoginContext new];
+    loginContext.user = user;
+    
     [loginContext execute];
     
     

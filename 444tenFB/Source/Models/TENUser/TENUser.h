@@ -6,8 +6,13 @@
 //  Copyright (c) 2015 444ten. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface TENUser : NSObject
+@property (nonatomic, strong)   NSString    *userID;
+@property (nonatomic, strong)   NSString    *firstName;
+@property (nonatomic, strong)   NSString    *lastName;
+
+@property (nonatomic, strong)   NSURL       *pictureUrl;
 
 @end
