@@ -61,7 +61,6 @@
     TENUser *user = self.user;
     NSDictionary *result = self.result;
     
-    
     user.userID = [result objectForKey: @"id"];
     user.firstName = [result objectForKey: @"first_name"];
     user.lastName = [result objectForKey: @"last_name"];
