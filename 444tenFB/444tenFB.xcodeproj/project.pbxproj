@@ -33,6 +33,7 @@
 		6C613FC81B5FD365001C0F23 /* TENContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FC71B5FD365001C0F23 /* TENContext.m */; };
 		6C613FD61B602186001C0F23 /* TENLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FD41B602186001C0F23 /* TENLoginViewController.m */; };
 		6C613FD71B602186001C0F23 /* TENLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C613FD51B602186001C0F23 /* TENLoginViewController.xib */; };
+		6C613FDA1B60220F001C0F23 /* TENLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FD91B60220F001C0F23 /* TENLoginView.m */; };
 		E9DAB54A61E2FDFFCF46A2A3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B09605898B49FD20C0C78A3B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,8 @@
 		6C613FD31B602186001C0F23 /* TENLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENLoginViewController.h; sourceTree = "<group>"; };
 		6C613FD41B602186001C0F23 /* TENLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENLoginViewController.m; sourceTree = "<group>"; };
 		6C613FD51B602186001C0F23 /* TENLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TENLoginViewController.xib; sourceTree = "<group>"; };
+		6C613FD81B60220F001C0F23 /* TENLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENLoginView.h; sourceTree = "<group>"; };
+		6C613FD91B60220F001C0F23 /* TENLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENLoginView.m; sourceTree = "<group>"; };
 		99F80E15D91D3AFD99A641FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B09605898B49FD20C0C78A3B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -449,6 +452,8 @@
 				6C613FD31B602186001C0F23 /* TENLoginViewController.h */,
 				6C613FD41B602186001C0F23 /* TENLoginViewController.m */,
 				6C613FD51B602186001C0F23 /* TENLoginViewController.xib */,
+				6C613FD81B60220F001C0F23 /* TENLoginView.h */,
+				6C613FD91B60220F001C0F23 /* TENLoginView.m */,
 			);
 			path = TENLoginViewController;
 			sourceTree = "<group>";
@@ -615,6 +620,7 @@
 				6C613F321B5AD8BB001C0F23 /* UITableView+TENExtensions.m in Sources */,
 				6C613FD61B602186001C0F23 /* TENLoginViewController.m in Sources */,
 				6C613F341B5AD8BB001C0F23 /* UIViewController+TENExtensions.m in Sources */,
+				6C613FDA1B60220F001C0F23 /* TENLoginView.m in Sources */,
 				6C613FA51B5BE7F2001C0F23 /* TENObservableObject.m in Sources */,
 				6C613FA81B5BE861001C0F23 /* TENMacro.m in Sources */,
 				6C613FBC1B5FC7E9001C0F23 /* TENLoginContext.m in Sources */,
