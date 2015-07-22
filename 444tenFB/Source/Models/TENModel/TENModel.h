@@ -8,6 +8,23 @@
 
 #import "TENObservableObject.h"
 
+typedef NS_ENUM(NSUInteger, TENModelState) {
+    TENModelUnloaded,
+    TENModelWillLoad,
+    TENModelLoaded,
+    TENModelDidFailLoad
+};
+
+@protocol TENModelObserver
+
+@optional
+- (void)modelDidUnload:(id)model;
+- (void)modelWillLoad:(id)model;
+- (void)modelDidLoad:(id)model;
+- (void)modelDidFailLoad:(id)model;
+
+@end
+
 @interface TENModel : TENObservableObject
 
 @end

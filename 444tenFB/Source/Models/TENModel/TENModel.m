@@ -10,4 +10,25 @@
 
 @implementation TENModel
 
+#pragma mark -
+#pragma mark Overload
+
+- (SEL)selectorForState:(NSUInteger)state {
+    switch (state) {
+        case TENModelUnloaded:
+            return @selector(modelDidUnload:);
+        case TENModelWillLoad:
+            return @selector(modelWillLoad:);
+        case TENModelLoaded:
+            return @selector(modelDidLoad:);
+        case TENModelDidFailLoad:
+            return @selector(modelDidFailLoad:);
+            
+        default:
+            [super selectorForState:state];
+    }
+    
+    return NULL;
+}
+
 @end
