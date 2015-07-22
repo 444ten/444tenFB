@@ -8,14 +8,20 @@
 
 #import "TENLoginView.h"
 
+static NSString * const kLogin  = @"Log in";
+static NSString * const kLogout = @"Log out";
+
 @implementation TENLoginView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+#pragma mark -
+#pragma mark Public
+
+- (void)setLoginConfiguration {
+    [self.loginButton setTitle:kLogin forState:UIControlStateNormal];
 }
-*/
+
+- (void)setLogoutConfiguration {
+    [self.loginButton setTitle:kLogout forState:UIControlStateNormal];
+}
 
 @end

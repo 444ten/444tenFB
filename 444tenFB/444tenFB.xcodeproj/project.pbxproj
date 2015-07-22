@@ -34,6 +34,8 @@
 		6C613FD61B602186001C0F23 /* TENLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FD41B602186001C0F23 /* TENLoginViewController.m */; };
 		6C613FD71B602186001C0F23 /* TENLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C613FD51B602186001C0F23 /* TENLoginViewController.xib */; };
 		6C613FDA1B60220F001C0F23 /* TENLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FD91B60220F001C0F23 /* TENLoginView.m */; };
+		6C613FDF1B6024D2001C0F23 /* TENFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FDD1B6024D2001C0F23 /* TENFriendsViewController.m */; };
+		6C613FE01B6024D2001C0F23 /* TENFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C613FDE1B6024D2001C0F23 /* TENFriendsViewController.xib */; };
 		E9DAB54A61E2FDFFCF46A2A3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B09605898B49FD20C0C78A3B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +104,9 @@
 		6C613FD51B602186001C0F23 /* TENLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TENLoginViewController.xib; sourceTree = "<group>"; };
 		6C613FD81B60220F001C0F23 /* TENLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENLoginView.h; sourceTree = "<group>"; };
 		6C613FD91B60220F001C0F23 /* TENLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENLoginView.m; sourceTree = "<group>"; };
+		6C613FDC1B6024D2001C0F23 /* TENFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENFriendsViewController.h; sourceTree = "<group>"; };
+		6C613FDD1B6024D2001C0F23 /* TENFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENFriendsViewController.m; sourceTree = "<group>"; };
+		6C613FDE1B6024D2001C0F23 /* TENFriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TENFriendsViewController.xib; sourceTree = "<group>"; };
 		99F80E15D91D3AFD99A641FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B09605898B49FD20C0C78A3B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -217,6 +222,7 @@
 		6C613F0D1B5AD79F001C0F23 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				6C613FDB1B6024BF001C0F23 /* TENFriendsViewController */,
 				6C613FD21B60216E001C0F23 /* TENLoginViewController */,
 				6C613F3A1B5ADAAD001C0F23 /* TENTestViewController */,
 			);
@@ -458,6 +464,16 @@
 			path = TENLoginViewController;
 			sourceTree = "<group>";
 		};
+		6C613FDB1B6024BF001C0F23 /* TENFriendsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6C613FDC1B6024D2001C0F23 /* TENFriendsViewController.h */,
+				6C613FDD1B6024D2001C0F23 /* TENFriendsViewController.m */,
+				6C613FDE1B6024D2001C0F23 /* TENFriendsViewController.xib */,
+			);
+			path = TENFriendsViewController;
+			sourceTree = "<group>";
+		};
 		8CBA02FE8C497FE6CED50C45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,6 +578,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C613FE01B6024D2001C0F23 /* TENFriendsViewController.xib in Resources */,
 				6C613F3F1B5ADAAD001C0F23 /* TENTestViewController.xib in Resources */,
 				6C613F091B5AD715001C0F23 /* Images.xcassets in Resources */,
 				6C613FD71B602186001C0F23 /* TENLoginViewController.xib in Resources */,
@@ -638,6 +655,7 @@
 				6C613FAC1B5C0028001C0F23 /* TSTFriendView.m in Sources */,
 				6C613EE01B5AD490001C0F23 /* TENAppDelegate.m in Sources */,
 				6C613F301B5AD8BB001C0F23 /* NSURLSession+TENExtensions.m in Sources */,
+				6C613FDF1B6024D2001C0F23 /* TENFriendsViewController.m in Sources */,
 				6C613F311B5AD8BB001C0F23 /* UINib+TENExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

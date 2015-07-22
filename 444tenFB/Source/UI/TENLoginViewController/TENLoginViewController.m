@@ -6,32 +6,60 @@
 //  Copyright (c) 2015 444ten. All rights reserved.
 //
 
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+
 #import "TENLoginViewController.h"
 
+#import "TENFriendsViewController.h"
+#import "TENLoginView.h"
+#import "TENMacro.h"
+
+static NSString * const TENLoginViewControllerTitle  = @"Login";
+
+TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginView);
+
 @interface TENLoginViewController ()
+
+- (void)pushNextIfLogin;
+- (void)pushNextController;
 
 @end
 
 @implementation TENLoginViewController
 
+#pragma mark -
+#pragma mark View Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.title = TENLoginViewControllerTitle;
+    
+    [self pushNextIfLogin];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark -
+#pragma mark Interface Handling
+
+- (IBAction)onLoginButton:(id)sender {
+    
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark -
+#pragma mark Private
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)pushNextIfLogin {
+    FBSDKAccessToken *token = [FBSDKAccessToken currentAccessToken];
+    if (nil != token) {
+        [self.loginView setLogoutConfiguration];
+        [self pushNextController];
+    }
 }
-*/
+
+- (void)pushNextController {
+    TENFriendsViewController *controller = [TENFriendsViewController new];
+    
+    [self.navigationController pushViewController:controller animated:NO];
+}
 
 @end

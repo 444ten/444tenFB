@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface TENLoginView : UIView
+@property (nonatomic, strong)   IBOutlet UIButton   *loginButton;
+
+- (void)setLoginConfiguration;
+- (void)setLogoutConfiguration;
 
 @end

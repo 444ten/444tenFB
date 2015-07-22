@@ -10,4 +10,6 @@
 
 @interface TENLoginViewController : UIViewController
 
+- (IBAction)onLoginButton:(id)sender;
+
 @end
