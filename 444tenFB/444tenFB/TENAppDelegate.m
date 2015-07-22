@@ -6,18 +6,14 @@
 //  Copyright (c) 2015 444ten. All rights reserved.
 //
 
-#import "TENAppDelegate.h"
-
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
-#import "TENUserViewController.h"
-#import "TENTestViewController.h"
+#import "TENAppDelegate.h"
 
-#import "TSTFriendView.h"
-
-#import "UINib+TENExtensions.h"
 #import "UIViewController+TENExtensions.h"
 #import "UIWindow+TENExtensions.h"
+
+#import "TENLoginViewController.h"
 
 @interface TENAppDelegate ()
 
@@ -33,7 +29,7 @@
     UIWindow *window = [UIWindow window];
     self.window = window;
 
-    TENUserViewController *controller = [TENUserViewController controller];
+    TENLoginViewController *controller = [TENLoginViewController controller];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
     
     window.rootViewController = navigationController;

@@ -31,9 +31,8 @@
 		6C613FB31B5E6FC3001C0F23 /* TENUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FB21B5E6FC3001C0F23 /* TENUser.m */; };
 		6C613FBC1B5FC7E9001C0F23 /* TENLoginContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FBB1B5FC7E9001C0F23 /* TENLoginContext.m */; };
 		6C613FC81B5FD365001C0F23 /* TENContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FC71B5FD365001C0F23 /* TENContext.m */; };
-		6C613FCD1B5FD72F001C0F23 /* TENUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FCB1B5FD72F001C0F23 /* TENUserViewController.m */; };
-		6C613FCE1B5FD72F001C0F23 /* TENUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C613FCC1B5FD72F001C0F23 /* TENUserViewController.xib */; };
-		6C613FD11B5FD7DC001C0F23 /* TENUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FD01B5FD7DC001C0F23 /* TENUserView.m */; };
+		6C613FD61B602186001C0F23 /* TENLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FD41B602186001C0F23 /* TENLoginViewController.m */; };
+		6C613FD71B602186001C0F23 /* TENLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C613FD51B602186001C0F23 /* TENLoginViewController.xib */; };
 		E9DAB54A61E2FDFFCF46A2A3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B09605898B49FD20C0C78A3B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -97,11 +96,9 @@
 		6C613FBB1B5FC7E9001C0F23 /* TENLoginContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENLoginContext.m; sourceTree = "<group>"; };
 		6C613FC61B5FD365001C0F23 /* TENContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENContext.h; sourceTree = "<group>"; };
 		6C613FC71B5FD365001C0F23 /* TENContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENContext.m; sourceTree = "<group>"; };
-		6C613FCA1B5FD72F001C0F23 /* TENUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENUserViewController.h; sourceTree = "<group>"; };
-		6C613FCB1B5FD72F001C0F23 /* TENUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENUserViewController.m; sourceTree = "<group>"; };
-		6C613FCC1B5FD72F001C0F23 /* TENUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TENUserViewController.xib; sourceTree = "<group>"; };
-		6C613FCF1B5FD7DC001C0F23 /* TENUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENUserView.h; sourceTree = "<group>"; };
-		6C613FD01B5FD7DC001C0F23 /* TENUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENUserView.m; sourceTree = "<group>"; };
+		6C613FD31B602186001C0F23 /* TENLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENLoginViewController.h; sourceTree = "<group>"; };
+		6C613FD41B602186001C0F23 /* TENLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENLoginViewController.m; sourceTree = "<group>"; };
+		6C613FD51B602186001C0F23 /* TENLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TENLoginViewController.xib; sourceTree = "<group>"; };
 		99F80E15D91D3AFD99A641FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B09605898B49FD20C0C78A3B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -217,7 +214,7 @@
 		6C613F0D1B5AD79F001C0F23 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				6C613FC91B5FD715001C0F23 /* TENUserViewController */,
+				6C613FD21B60216E001C0F23 /* TENLoginViewController */,
 				6C613F3A1B5ADAAD001C0F23 /* TENTestViewController */,
 			);
 			path = UI;
@@ -446,16 +443,14 @@
 			path = TENContext;
 			sourceTree = "<group>";
 		};
-		6C613FC91B5FD715001C0F23 /* TENUserViewController */ = {
+		6C613FD21B60216E001C0F23 /* TENLoginViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6C613FCA1B5FD72F001C0F23 /* TENUserViewController.h */,
-				6C613FCB1B5FD72F001C0F23 /* TENUserViewController.m */,
-				6C613FCC1B5FD72F001C0F23 /* TENUserViewController.xib */,
-				6C613FCF1B5FD7DC001C0F23 /* TENUserView.h */,
-				6C613FD01B5FD7DC001C0F23 /* TENUserView.m */,
+				6C613FD31B602186001C0F23 /* TENLoginViewController.h */,
+				6C613FD41B602186001C0F23 /* TENLoginViewController.m */,
+				6C613FD51B602186001C0F23 /* TENLoginViewController.xib */,
 			);
-			path = TENUserViewController;
+			path = TENLoginViewController;
 			sourceTree = "<group>";
 		};
 		8CBA02FE8C497FE6CED50C45 /* Frameworks */ = {
@@ -564,8 +559,8 @@
 			files = (
 				6C613F3F1B5ADAAD001C0F23 /* TENTestViewController.xib in Resources */,
 				6C613F091B5AD715001C0F23 /* Images.xcassets in Resources */,
+				6C613FD71B602186001C0F23 /* TENLoginViewController.xib in Resources */,
 				6C613F081B5AD715001C0F23 /* LaunchScreen.xib in Resources */,
-				6C613FCE1B5FD72F001C0F23 /* TENUserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,15 +613,14 @@
 			files = (
 				6C613F2F1B5AD8BB001C0F23 /* NSMutableArray+TENExtensions.m in Sources */,
 				6C613F321B5AD8BB001C0F23 /* UITableView+TENExtensions.m in Sources */,
+				6C613FD61B602186001C0F23 /* TENLoginViewController.m in Sources */,
 				6C613F341B5AD8BB001C0F23 /* UIViewController+TENExtensions.m in Sources */,
 				6C613FA51B5BE7F2001C0F23 /* TENObservableObject.m in Sources */,
-				6C613FD11B5FD7DC001C0F23 /* TENUserView.m in Sources */,
 				6C613FA81B5BE861001C0F23 /* TENMacro.m in Sources */,
 				6C613FBC1B5FC7E9001C0F23 /* TENLoginContext.m in Sources */,
 				6C613F3E1B5ADAAD001C0F23 /* TENTestViewController.m in Sources */,
 				6C613F2D1B5AD8BB001C0F23 /* NSBundle+TENExtensions.m in Sources */,
 				6C613F031B5AD709001C0F23 /* main.m in Sources */,
-				6C613FCD1B5FD72F001C0F23 /* TENUserViewController.m in Sources */,
 				6C613F391B5AD93E001C0F23 /* TENChangedPath.m in Sources */,
 				6C613FB31B5E6FC3001C0F23 /* TENUser.m in Sources */,
 				6C613F351B5AD8BB001C0F23 /* UIWindow+TENExtensions.m in Sources */,
