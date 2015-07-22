@@ -27,22 +27,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    BOOL result = [[FBSDKApplicationDelegate sharedInstance] application:application
+                                           didFinishLaunchingWithOptions:launchOptions];
+    
     UIWindow *window = [UIWindow window];
     self.window = window;
 
     TENUserViewController *controller = [TENUserViewController controller];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
     
-//    TSTFriendView *friendView = [UINib objectWithClass:[TSTFriendView class]];
-//    TSTFriendView *friendView = [TSTFriendView new];
-//    friendView.backgroundColor = [UIColor yellowColor];
-//    
-//    controller.view = friendView;
-    
-    window.rootViewController = controller;
+    window.rootViewController = navigationController;
     [window makeKeyAndVisible];
     
-    return [[FBSDKApplicationDelegate sharedInstance] application:application
-                                    didFinishLaunchingWithOptions:launchOptions];
+    return result;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
