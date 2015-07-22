@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TENUserView : UIView
+#import "TENLoginContext.h"
+
+@interface TENUserView : UIView <TENContextObserver>
+@property (nonatomic, strong)   IBOutlet UILabel    *firstNameLabel;
+@property (nonatomic, strong)   IBOutlet UILabel    *lastNameLabel;
+
+@property (nonatomic, strong)   TENLoginContext *context;
+
+- (void)fillWithContext:(TENLoginContext *)context;
 
 @end

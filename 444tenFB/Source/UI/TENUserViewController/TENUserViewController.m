@@ -8,18 +8,28 @@
 
 #import "TENUserViewController.h"
 
-@interface TENUserViewController ()
+#import "TENLoginContext.h"
+#import "TENMacro.h"
+#import "TENUser.h"
+#import "TENUserView.h"
 
-@end
+TENViewControllerBaseViewProperty(TENUserViewController, userView, TENUserView);
 
 @implementation TENUserViewController
 
+#pragma mark -
+#pragma mark View Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+    
+    TENUser *user = [TENUser new];
+    self.user = user;
+    
+    TENLoginContext *loginContext = [TENLoginContext new];
+    loginContext.user = user;
+    
+    self.userView.context = loginContext;
 }
 
 @end

@@ -10,6 +10,7 @@
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 
+#import "TENUserViewController.h"
 #import "TENTestViewController.h"
 
 #import "TSTFriendView.h"
@@ -29,7 +30,7 @@
     UIWindow *window = [UIWindow window];
     self.window = window;
 
-    TENTestViewController *controller = [TENTestViewController controller];
+    TENUserViewController *controller = [TENUserViewController controller];
     
 //    TSTFriendView *friendView = [UINib objectWithClass:[TSTFriendView class]];
 //    TSTFriendView *friendView = [TSTFriendView new];
@@ -40,7 +41,6 @@
     window.rootViewController = controller;
     [window makeKeyAndVisible];
     
-//    return YES;
     return [[FBSDKApplicationDelegate sharedInstance] application:application
                                     didFinishLaunchingWithOptions:launchOptions];
 }

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TENUserViewController : UIViewController
+@class TENUser;
+
+@interface TENUserViewController : UIViewController 
+@property (nonatomic, strong)   TENUser *user;
 
 @end
