@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 @interface TENLoginView : UIView
-@property (nonatomic, strong)   IBOutlet UILabel    *firstNameLabel;
-@property (nonatomic, strong)   IBOutlet UILabel    *lastNameLabel;
-@property (nonatomic, strong)   IBOutlet UIButton   *loginButton;
+@property (nonatomic, strong)   IBOutlet UILabel                    *firstNameLabel;
+@property (nonatomic, strong)   IBOutlet UILabel                    *lastNameLabel;
+@property (nonatomic, strong)   IBOutlet UIButton                   *loginButton;
+@property (nonatomic, strong)   IBOutlet FBSDKProfilePictureView    *profilePictureView;
 
 @property (nonatomic, assign, getter=isLogin)   BOOL    login;
 

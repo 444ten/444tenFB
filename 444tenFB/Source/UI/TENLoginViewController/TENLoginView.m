@@ -30,6 +30,10 @@ static NSString * const kLogout = @"Log out";
 - (void)fillWithModel:(TENUser *)model {
     self.firstNameLabel.text = model.firstName;
     self.lastNameLabel.text = model.lastName;
+
+    FBSDKProfilePictureView *profilePictureView = self.profilePictureView;
+    profilePictureView.profileID = model.userID;
+    [profilePictureView setNeedsImageUpdate];
 }
 
 @end

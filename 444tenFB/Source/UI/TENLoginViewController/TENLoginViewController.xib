@@ -14,8 +14,13 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" id="Qe4-FC-z01" customClass="FBSDKProfilePictureView">
+                    <rect key="frame" x="91" y="108" width="139" height="105"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RKZ-17-h6K">
-                    <rect key="frame" x="120" y="118" width="81" height="21"/>
+                    <rect key="frame" x="120" y="260" width="81" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.95357875631313127" green="0.95357875631313127" blue="0.95357875631313127" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -23,7 +28,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9q1-OV-hib">
-                    <rect key="frame" x="120" y="170" width="81" height="21"/>
+                    <rect key="frame" x="120" y="312" width="81" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.95357875631313127" green="0.95357875631313127" blue="0.95357875631313127" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -31,7 +36,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kk7-k2-uew">
-                    <rect key="frame" x="126" y="269" width="68" height="30"/>
+                    <rect key="frame" x="126" y="411" width="68" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Log in">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -46,6 +51,7 @@
                 <outlet property="firstNameLabel" destination="RKZ-17-h6K" id="tPl-DN-W7o"/>
                 <outlet property="lastNameLabel" destination="9q1-OV-hib" id="egd-uW-oRH"/>
                 <outlet property="loginButton" destination="kk7-k2-uew" id="kEE-pQ-fSf"/>
+                <outlet property="profilePictureView" destination="Qe4-FC-z01" id="3UW-Oz-FKE"/>
             </connections>
             <point key="canvasLocation" x="380" y="548"/>
         </view>

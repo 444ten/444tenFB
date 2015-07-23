@@ -80,6 +80,7 @@
 }
 
 - (void)performFBSDKProfileNotification:(NSNotification *)notification {
+    [self.user fillFromFBSDKProfile];
     self.user.state = TENModelLoaded;
 }
 

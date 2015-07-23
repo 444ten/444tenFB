@@ -77,6 +77,8 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
     BOOL currentLogin = loginView.isLogin;
     
     if (currentLogin) {
+        self.user = nil;
+        [self.loginView fillWithModel:self.user];        
         [[FBSDKLoginManager new] logOut];
     } else {
         self.user = [TENUser new];
@@ -93,6 +95,10 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
     FBSDKAccessToken *token = [FBSDKAccessToken currentAccessToken];
     if (nil != token) {
         self.loginView.login = YES;
+
+        self.user = [TENUser new];
+        [self.user fillFromFBSDKProfile];
+        [self.loginView fillWithModel:self.user];
         [self pushNextController];
     }
 }
