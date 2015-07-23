@@ -13,6 +13,5 @@
 @interface TENLoginContext : TENContext
 @property (nonatomic, strong)   TENUser *user;
 
-- (void)execute;
 
 @end

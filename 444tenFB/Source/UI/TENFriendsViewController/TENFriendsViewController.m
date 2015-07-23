@@ -8,6 +8,8 @@
 
 #import "TENFriendsViewController.h"
 
+#import "TENFriendsView.h"
+
 @interface TENFriendsViewController ()
 
 @end

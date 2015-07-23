@@ -10,4 +10,6 @@
 
 @interface TENContext : NSObject
 
+- (void)execute;
+
 @end
