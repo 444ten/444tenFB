@@ -12,7 +12,8 @@ typedef NS_ENUM(NSUInteger, TENModelState) {
     TENModelUnloaded,
     TENModelWillLoad,
     TENModelLoaded,
-    TENModelDidFailLoad
+    TENModelDidFailLoad,
+    TENModelChanged
 };
 
 @protocol TENModelObserver
@@ -22,6 +23,7 @@ typedef NS_ENUM(NSUInteger, TENModelState) {
 - (void)modelWillLoad:(id)model;
 - (void)modelDidLoad:(id)model;
 - (void)modelDidFailLoad:(id)model;
+- (void)model:(id)model didChangeWithUsersInfo:(id)userInfo;
 
 @end
 

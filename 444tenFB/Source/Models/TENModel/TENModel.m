@@ -23,7 +23,9 @@
             return @selector(modelDidLoad:);
         case TENModelDidFailLoad:
             return @selector(modelDidFailLoad:);
-            
+        case TENModelChanged:
+            return @selector(model:didChangeWithUsersInfo:);
+
         default:
             [super selectorForState:state];
     }
