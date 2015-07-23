@@ -49,6 +49,8 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
         _user = user;
         [_user addObserver:self];
     }
+    
+    [self.loginView fillWithModel:_user];;
 }
 
 - (void)setLoginContext:(TENLoginContext *)loginContext {
@@ -73,19 +75,14 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 #pragma mark Interface Handling
 
 - (IBAction)onLoginButton:(id)sender {
-    TENLoginView *loginView = self.loginView;
-    BOOL currentLogin = loginView.isLogin;
-    
-    if (currentLogin) {
+    if (nil != self.user) {
         self.user = nil;
-        [self.loginView fillWithModel:self.user];        
         [[FBSDKLoginManager new] logOut];
     } else {
         self.user = [TENUser new];
         self.loginContext = [TENLoginContext new];
+        [self pushNextController];
     }
-    
-    loginView.login = !currentLogin;
 }
 
 #pragma mark -
@@ -94,11 +91,10 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 - (void)pushNextIfLogin {
     FBSDKAccessToken *token = [FBSDKAccessToken currentAccessToken];
     if (nil != token) {
-        self.loginView.login = YES;
+        TENUser *user = [TENUser new];
+        [user fillFromFBSDKProfile];
 
-        self.user = [TENUser new];
-        [self.user fillFromFBSDKProfile];
-        [self.loginView fillWithModel:self.user];
+        self.user = user;
         [self pushNextController];
     }
 }
@@ -117,7 +113,8 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
     
     TENPerformOnMainThreadWithBlock(^{
         TENStrongifyAndReturnIfNil(self);
-        [self.loginView fillWithModel:model];
+        self.loginContext = nil;
+        self.user = model;
     });
 }
 
