@@ -7,6 +7,7 @@
 //
 
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 
 #import "TENLoginViewController.h"
 
@@ -21,7 +22,8 @@ static NSString * const TENLoginViewControllerTitle  = @"Login";
 TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginView);
 
 @interface TENLoginViewController ()
-@property (nonatomic, strong)   TENUser *user;
+@property (nonatomic, strong)   TENUser         *user;
+@property (nonatomic, strong)   TENLoginContext *loginContext;
 
 - (void)pushNextIfLogin;
 - (void)pushNextController;
@@ -49,6 +51,13 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
     }
 }
 
+- (void)setLoginContext:(TENLoginContext *)loginContext {
+    _loginContext = loginContext;
+    
+    _loginContext.user = self.user;
+    [_loginContext execute];
+}
+
 #pragma mark -
 #pragma mark View Lifecycle
 
@@ -64,13 +73,17 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 #pragma mark Interface Handling
 
 - (IBAction)onLoginButton:(id)sender {
-    TENUser *user = [TENUser new];
-    self.user = user;
+    TENLoginView *loginView = self.loginView;
+    BOOL currentLogin = loginView.isLogin;
     
-    TENLoginContext *loginContext = [TENLoginContext new];
-    loginContext.user = user;
+    if (currentLogin) {
+        [[FBSDKLoginManager new] logOut];
+    } else {
+        self.user = [TENUser new];
+        self.loginContext = [TENLoginContext new];
+    }
     
-    [loginContext execute];
+    loginView.login = !currentLogin;
 }
 
 #pragma mark -
@@ -79,7 +92,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 - (void)pushNextIfLogin {
     FBSDKAccessToken *token = [FBSDKAccessToken currentAccessToken];
     if (nil != token) {
-        [self.loginView setLogoutConfiguration];
+        self.loginView.login = YES;
         [self pushNextController];
     }
 }

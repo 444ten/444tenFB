@@ -6,74 +6,80 @@
 //  Copyright (c) 2015 444ten. All rights reserved.
 //
 
+#import <FBSDKCoreKit.h>
+
+#import <FBSDKLoginKit.h>
 #import "TENLoginContext.h"
 
-#import <FBSDKCoreKit.h>
-#import <FBSDKLoginKit.h>
-
-#import "TENMacro.h"
 #import "TENUser.h"
 
 @interface TENLoginContext ()
-@property (nonatomic, strong)   id  result;
+@property (nonatomic, readonly) NSArray     *permissions;
 
-- (void)loginAndPerformRequest;
-- (void)parsing;
-- (void)notify;
+- (void)addNotifications;
+- (void)removeNotifications;
+- (void)performFBSDKProfileNotification:(id)object;
 
 @end
 
 @implementation TENLoginContext
 
+@dynamic permissions;
+
+#pragma mark -
+#pragma mark Initializations and Deallocations
+
+- (void)dealloc {
+    [self removeNotifications];
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self addNotifications];
+    }
+    
+    return self;
+}
+
+#pragma mark -
+#pragma mark - Accessors
+
+- (NSArray *)permissions {
+    return @[@"public_profile"];
+}
+
 #pragma mark -
 #pragma mark - Public
 
 - (void)execute {
-    [self loginAndPerformRequest];
+    [[FBSDKLoginManager new] logInWithReadPermissions: self.permissions
+                                              handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+                                                  if (nil != error || result.isCancelled) {
+                                                      NSLog(@"%@", error);
+                                                      return;
+                                                  }
+                                              }];
 }
 
 #pragma mark -
 #pragma mark - Private
 
-- (void)loginAndPerformRequest {
-    NSArray *permissions = @[@"email", @"user_friends"];
-    
-    FBSDKLoginManager *login = [FBSDKLoginManager new];
-    [login logInWithReadPermissions: permissions handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
-        if (nil != error || result.isCancelled) {
-            return;
-        }
-        
-        NSString *graphPath = @"me?fields=id,first_name,last_name,picture";
-        FBSDKGraphRequest *request =[[FBSDKGraphRequest alloc] initWithGraphPath:graphPath parameters:nil];
-        
-        void(^completionHandler)(id, id , id) = ^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
-            if (nil == error) {
-                self.result = result;
-                [self parsing];
-            }
-        };
-        
-        [request startWithCompletionHandler:completionHandler];
-    }];
-    
+- (void)addNotifications {
+    [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(performFBSDKProfileNotification:)
+                                                 name:FBSDKProfileDidChangeNotification
+                                               object:nil];
 }
 
-- (void)parsing {
-    TENUser *user = self.user;
-    NSDictionary *result = self.result;
-    
-    user.userID = [result objectForKey: @"id"];
-    user.firstName = [result objectForKey: @"first_name"];
-    user.lastName = [result objectForKey: @"last_name"];
-    
-    NSDictionary *dictionary = [[result objectForKey:@"picture"] objectForKey:@"data"];
-    user.pictureUrl = [dictionary objectForKey: @"url"];
-    
-    [self notify];
+- (void)removeNotifications {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:FBSDKProfileDidChangeNotification
+                                                  object:nil];
 }
 
-- (void)notify {
+- (void)performFBSDKProfileNotification:(NSNotification *)notification {
     self.user.state = TENModelLoaded;
 }
 

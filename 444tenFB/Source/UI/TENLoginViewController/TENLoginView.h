@@ -13,8 +13,7 @@
 @property (nonatomic, strong)   IBOutlet UILabel    *lastNameLabel;
 @property (nonatomic, strong)   IBOutlet UIButton   *loginButton;
 
-- (void)setLoginConfiguration;
-- (void)setLogoutConfiguration;
+@property (nonatomic, assign, getter=isLogin)   BOOL    login;
 
 - (void)fillWithModel:(id)model;
 

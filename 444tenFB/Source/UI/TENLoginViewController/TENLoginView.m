@@ -16,15 +16,16 @@ static NSString * const kLogout = @"Log out";
 @implementation TENLoginView
 
 #pragma mark -
+#pragma mark Accessors
+
+- (void)setLogin:(BOOL)login {
+    _login = login;
+    [self.loginButton setTitle:_login ? kLogout : kLogin
+                      forState:UIControlStateNormal];
+}
+
+#pragma mark -
 #pragma mark Public
-
-- (void)setLoginConfiguration {
-    [self.loginButton setTitle:kLogin forState:UIControlStateNormal];
-}
-
-- (void)setLogoutConfiguration {
-    [self.loginButton setTitle:kLogout forState:UIControlStateNormal];
-}
 
 - (void)fillWithModel:(TENUser *)model {
     self.firstNameLabel.text = model.firstName;
