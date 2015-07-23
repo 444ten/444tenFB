@@ -85,6 +85,10 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
     }
 }
 
+- (IBAction)onFriendsButton:(id)sender {
+    [self pushNextController];
+}
+
 #pragma mark -
 #pragma mark Private
 

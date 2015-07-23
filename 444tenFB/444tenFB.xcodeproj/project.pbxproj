@@ -38,6 +38,7 @@
 		6C613FE01B6024D2001C0F23 /* TENFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C613FDE1B6024D2001C0F23 /* TENFriendsViewController.xib */; };
 		6C613FE41B602FD5001C0F23 /* TENModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FE31B602FD5001C0F23 /* TENModel.m */; };
 		6C613FE81B603BCE001C0F23 /* TENThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FE71B603BCE001C0F23 /* TENThread.m */; };
+		6CF9BB051B61125700D409EC /* TENFriendsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9BB041B61125700D409EC /* TENFriendsView.m */; };
 		E9DAB54A61E2FDFFCF46A2A3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B09605898B49FD20C0C78A3B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,8 @@
 		6C613FE31B602FD5001C0F23 /* TENModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENModel.m; sourceTree = "<group>"; };
 		6C613FE61B603BCE001C0F23 /* TENThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENThread.h; sourceTree = "<group>"; };
 		6C613FE71B603BCE001C0F23 /* TENThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENThread.m; sourceTree = "<group>"; };
+		6CF9BB031B61125700D409EC /* TENFriendsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENFriendsView.h; sourceTree = "<group>"; };
+		6CF9BB041B61125700D409EC /* TENFriendsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENFriendsView.m; sourceTree = "<group>"; };
 		99F80E15D91D3AFD99A641FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B09605898B49FD20C0C78A3B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -478,6 +481,8 @@
 				6C613FDC1B6024D2001C0F23 /* TENFriendsViewController.h */,
 				6C613FDD1B6024D2001C0F23 /* TENFriendsViewController.m */,
 				6C613FDE1B6024D2001C0F23 /* TENFriendsViewController.xib */,
+				6CF9BB031B61125700D409EC /* TENFriendsView.h */,
+				6CF9BB041B61125700D409EC /* TENFriendsView.m */,
 			);
 			path = TENFriendsViewController;
 			sourceTree = "<group>";
@@ -682,6 +687,7 @@
 				6C613F331B5AD8BB001C0F23 /* UIView+TENExtensions.m in Sources */,
 				6C613FAC1B5C0028001C0F23 /* TSTFriendView.m in Sources */,
 				6C613EE01B5AD490001C0F23 /* TENAppDelegate.m in Sources */,
+				6CF9BB051B61125700D409EC /* TENFriendsView.m in Sources */,
 				6C613F301B5AD8BB001C0F23 /* NSURLSession+TENExtensions.m in Sources */,
 				6C613FDF1B6024D2001C0F23 /* TENFriendsViewController.m in Sources */,
 				6C613F311B5AD8BB001C0F23 /* UINib+TENExtensions.m in Sources */,

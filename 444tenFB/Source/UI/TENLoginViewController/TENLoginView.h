@@ -17,6 +17,7 @@
 @property (nonatomic, strong)   IBOutlet UILabel                    *firstNameLabel;
 @property (nonatomic, strong)   IBOutlet UILabel                    *lastNameLabel;
 @property (nonatomic, strong)   IBOutlet UIButton                   *loginButton;
+@property (nonatomic, strong)   IBOutlet UIButton                   *friendsButton;
 
 - (void)fillWithModel:(id)model;
 
