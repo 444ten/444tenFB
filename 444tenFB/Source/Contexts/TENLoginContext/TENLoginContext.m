@@ -7,8 +7,8 @@
 //
 
 #import <FBSDKCoreKit.h>
-
 #import <FBSDKLoginKit.h>
+
 #import "TENLoginContext.h"
 
 #import "TENUser.h"
@@ -46,7 +46,7 @@
 #pragma mark - Accessors
 
 - (NSArray *)permissions {
-    return @[@"public_profile"];
+    return @[@"public_profile", @"user_friends"];
 }
 
 #pragma mark -

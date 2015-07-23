@@ -13,5 +13,4 @@
 @interface TENFriendsContext : TENContext
 @property (nonatomic, strong)   TENFriends *friends;
 
-
 @end

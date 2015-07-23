@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TENFriendsViewController : UIViewController
+#import "TENFriends.h"
+
+@interface TENFriendsViewController : UIViewController <TENModelObserver>
 
 @end

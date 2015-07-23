@@ -8,13 +8,32 @@
 
 #import "TENFriendsViewController.h"
 
+#import "TENFriendsContext.h"
 #import "TENFriendsView.h"
+#import "TENMacro.h"
+#import "TENThread.h"
+#import "TENUser.h"
+
+TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFriendsView);
 
 @interface TENFriendsViewController ()
+@property (nonatomic, strong)   TENFriends  *friends;
 
 @end
 
 @implementation TENFriendsViewController
+
+#pragma mark -
+#pragma mark Accessors
+
+- (void)setFriends:(TENFriends *)friends {
+    if (friends != _friends) {
+        [_friends removeObserver:self];
+        
+        _friends = friends;
+        [_friends addObserver:self];
+    }
+}
 
 #pragma mark -
 #pragma mark View Lifecycle
@@ -22,23 +41,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    TENFriends *friends = [TENFriends new];
+    self.friends = friends;
+    
+    TENFriendsContext *friendsContext = [TENFriendsContext new];
+    friendsContext.friends = friends;
+    
+    [friendsContext execute];
 }
 
 #pragma mark -
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return [self.friends count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [UITableViewCell new];
     
-    cell.textLabel.text = @"mama";
+    TENUser *user = self.friends[indexPath.row];
+    
+    cell.textLabel.text = user.name;
     
     return cell;
 }
 
+#pragma mark -
+#pragma mark TENModelObserver
+
+- (void)modelDidLoad:(TENUser *)model {
+    TENWeakify(self);
+    
+    TENPerformOnMainThreadWithBlock(^{
+        TENStrongifyAndReturnIfNil(self);
+        [self.friendsView.friendsTableView reloadData];
+    });
+}
 
 @end
