@@ -18,12 +18,16 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c73-fF-fzN">
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c73-fF-fzN" customClass="FBSDKProfilePictureView">
                         <rect key="frame" x="8" y="0.0" width="55" height="43.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="j9R-SN-3gi" id="eeW-mW-mbo"/>
+                <outlet property="profileView" destination="c73-fF-fzN" id="V3o-K9-Pgo"/>
+            </connections>
             <point key="canvasLocation" x="351" y="239"/>
         </tableViewCell>
     </objects>

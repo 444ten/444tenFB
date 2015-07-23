@@ -81,7 +81,6 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
     } else {
         self.user = [TENUser new];
         self.loginContext = [TENLoginContext new];
-        [self pushNextController];
     }
 }
 

@@ -8,6 +8,9 @@
 
 #import "TENFriendsViewController.h"
 
+#import "UITableView+TENExtensions.h"
+
+#import "TENFriendCell.h"
 #import "TENFriendsContext.h"
 #import "TENFriendsView.h"
 #import "TENMacro.h"
@@ -59,11 +62,10 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [UITableViewCell new];
+    TENFriendCell *cell = [tableView cellWithClass:[TENFriendCell class]];
     
     TENUser *user = self.friends[indexPath.row];
-    
-    cell.textLabel.text = user.name;
+    [cell fillWithModel:user];
     
     return cell;
 }
