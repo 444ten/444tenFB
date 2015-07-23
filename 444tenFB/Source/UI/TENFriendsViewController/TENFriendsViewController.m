@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 444ten. All rights reserved.
 //
 
+// testUserEmail:tom_xvnxsgq_cruise@tfbnw.net password:123
+
 #import "TENFriendsViewController.h"
 
 #import "UITableView+TENExtensions.h"
@@ -78,6 +80,12 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
     
     TENPerformOnMainThreadWithBlock(^{
         TENStrongifyAndReturnIfNil(self);
+        
+        TENFriends *friends = self.friends;
+        for (NSUInteger iterator = 0; iterator < 1000; iterator++) {
+            [friends addObject:friends[arc4random() % 4]];
+        }
+        
         [self.friendsView.friendsTableView reloadData];
     });
 }
