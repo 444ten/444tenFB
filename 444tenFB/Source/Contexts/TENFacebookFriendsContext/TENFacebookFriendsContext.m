@@ -8,6 +8,36 @@
 
 #import "TENFacebookFriendsContext.h"
 
+#import "TENFriends.h"
+#import "TENUser.h"
+
 @implementation TENFacebookFriendsContext
+
+#pragma mark -
+#pragma mark Overload
+
+- (NSString *)graphPath {
+    return @"me/friend";
+}
+
+- (BOOL)parseResult:(NSDictionary *)result {
+    if (nil != result[@"error"]) {
+        return NO;
+    }
+    
+    NSArray *array = result[@"data"];
+    TENFriends *friends = (TENFriends *)self.model;
+    
+    for (NSDictionary *object in array) {
+        TENUser *user = [TENUser new];
+        
+        user.userID = object[@"id"];
+        user.name = object[@"name"];
+        
+        [friends addObject:user];
+    }
+
+    return YES;
+}
 
 @end
