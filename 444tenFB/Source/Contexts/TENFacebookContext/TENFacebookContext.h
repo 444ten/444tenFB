@@ -8,6 +8,13 @@
 
 #import "TENContext.h"
 
+@class TENModel;
+
 @interface TENFacebookContext : TENContext
+@property (nonatomic, strong)   TENModel    *model;
+
+- (NSString *)graphPath;
+
+- (BOOL)parseResult:(id)result;
 
 @end

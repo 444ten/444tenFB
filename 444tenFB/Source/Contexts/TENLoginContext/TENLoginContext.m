@@ -53,7 +53,7 @@
 #pragma mark - Public
 
 - (void)execute {
-    [[FBSDKLoginManager new] logInWithReadPermissions: self.permissions
+    [[FBSDKLoginManager new] logInWithReadPermissions:self.permissions
                                               handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
                                                   if (nil != error || result.isCancelled) {
                                                       NSLog(@"%@", error);
