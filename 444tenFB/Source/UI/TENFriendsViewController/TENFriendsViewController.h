@@ -10,6 +10,9 @@
 
 #import "TENFriends.h"
 
+@class TENUser;
+
 @interface TENFriendsViewController : UIViewController <TENModelObserver>
+@property (nonatomic, strong)  TENUser  *user;
 
 @end

@@ -22,7 +22,6 @@
 TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFriendsView);
 
 @interface TENFriendsViewController ()
-@property (nonatomic, strong)   TENFriends                  *friends;
 @property (nonatomic, strong)   TENFacebookFriendsContext   *context;
 
 @end
@@ -32,22 +31,13 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
 #pragma mark -
 #pragma mark Accessors
 
-- (void)setFriends:(TENFriends *)friends {
-    if (friends != _friends) {
-        [_friends removeObserver:self];
-        
-        _friends = friends;
-        [_friends addObserver:self];
-    }
-}
-
 - (void)setContext:(TENFacebookFriendsContext *)context {
     if (context != _context) {
         [_context cancel];
         
         _context = context;
         
-        _context.model = self.friends;
+        _context.model = self.user;
         [_context execute];
     }
 }
@@ -58,7 +48,6 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.friends = [TENFriends new];
     self.context = [TENFacebookFriendsContext new];
 }
 
@@ -66,14 +55,14 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.friends count];
+    return [self.user.friends count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TENFriendCell *cell = [tableView cellWithClass:[TENFriendCell class]];
     
-    TENUser *user = self.friends[indexPath.row];
+    TENUser *user = self.user.friends[indexPath.row];
     [cell fillWithModel:user];
     
     return cell;
@@ -88,7 +77,7 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
     TENPerformOnMainThreadWithBlock(^{
         TENStrongifyAndReturnIfNil(self);
         
-        TENFriends *friends = self.friends;
+        TENFriends *friends = self.user.friends;
         for (NSUInteger iterator = 0; iterator < 1000; iterator++) {
 //            [friends addObject:friends[arc4random() % 4]];
             [friends addObject:friends[0]];
