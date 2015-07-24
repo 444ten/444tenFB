@@ -13,7 +13,7 @@
 #import "UITableView+TENExtensions.h"
 
 #import "TENFriendCell.h"
-#import "TENFriendsContext.h"
+#import "TENFacebookFriendsContext.h"
 #import "TENFriendsView.h"
 #import "TENMacro.h"
 #import "TENThread.h"
@@ -22,7 +22,8 @@
 TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFriendsView);
 
 @interface TENFriendsViewController ()
-@property (nonatomic, strong)   TENFriends  *friends;
+@property (nonatomic, strong)   TENFriends                  *friends;
+@property (nonatomic, strong)   TENFacebookFriendsContext   *context;
 
 @end
 
@@ -40,19 +41,25 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
     }
 }
 
+- (void)setContext:(TENFacebookFriendsContext *)context {
+    if (context != _context) {
+        [_context cancel];
+        
+        _context = context;
+        
+        _context.model = self.friends;
+        [_context execute];
+    }
+}
+
 #pragma mark -
 #pragma mark View Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    TENFriends *friends = [TENFriends new];
-    self.friends = friends;
-    
-    TENFriendsContext *friendsContext = [TENFriendsContext new];
-    friendsContext.friends = friends;
-    
-    [friendsContext execute];
+    self.friends = [TENFriends new];
+    self.context = [TENFacebookFriendsContext new];
 }
 
 #pragma mark -
@@ -83,7 +90,8 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
         
         TENFriends *friends = self.friends;
         for (NSUInteger iterator = 0; iterator < 1000; iterator++) {
-            [friends addObject:friends[arc4random() % 4]];
+//            [friends addObject:friends[arc4random() % 4]];
+            [friends addObject:friends[0]];
         }
         
         [self.friendsView.friendsTableView reloadData];

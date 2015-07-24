@@ -17,7 +17,7 @@
 #pragma mark Overload
 
 - (NSString *)graphPath {
-    return @"me/friend";
+    return @"me/friends";
 }
 
 - (BOOL)parseResult:(NSDictionary *)result {
