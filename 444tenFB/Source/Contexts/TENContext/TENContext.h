@@ -12,4 +12,6 @@
 
 - (void)execute;
 
+- (void)cancel;
+
 @end
