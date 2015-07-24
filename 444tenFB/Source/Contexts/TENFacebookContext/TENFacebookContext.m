@@ -43,6 +43,10 @@
     }
 }
 
+- (void)cancel {
+    [self.connection cancel];
+}
+
 #pragma mark -
 #pragma mark Public
 
