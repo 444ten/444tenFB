@@ -14,74 +14,54 @@
 #import "TENUser.h"
 
 @interface TENLoginContext ()
-@property (nonatomic, readonly) NSArray     *permissions;
+@property (nonatomic, readonly)     FBSDKLoginManager   *loginManager;
 
-- (void)addNotifications;
-- (void)removeNotifications;
-- (void)performFBSDKProfileNotification:(id)object;
+- (FBSDKLoginManagerRequestTokenHandler)handler;
 
 @end
 
 @implementation TENLoginContext
 
-@dynamic permissions;
-
-#pragma mark -
-#pragma mark Initializations and Deallocations
-
-- (void)dealloc {
-    [self removeNotifications];
-}
-
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        [self addNotifications];
-    }
-    
-    return self;
-}
-
 #pragma mark -
 #pragma mark - Accessors
+
+- (FBSDKLoginManager *)loginManager {
+    return [FBSDKLoginManager new];
+}
+
+#pragma mark -
+#pragma mark - Public
 
 - (NSArray *)permissions {
     return @[@"public_profile", @"user_friends"];
 }
 
 #pragma mark -
-#pragma mark - Public
+#pragma mark - Overload
 
 - (void)execute {
-    [[FBSDKLoginManager new] logInWithReadPermissions:self.permissions
-                                              handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
-                                                  if (nil != error || result.isCancelled) {
-                                                      NSLog(@"%@", error);
-                                                      return;
-                                                  }
-                                              }];
+    self.model.state = TENModelWillLoad;
+    [self.loginManager logInWithReadPermissions:[self permissions] handler:[self handler]];
+}
+
+- (void)cancel {
+    [self.loginManager logOut];
 }
 
 #pragma mark -
 #pragma mark - Private
 
-- (void)addNotifications {
-    [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(performFBSDKProfileNotification:)
-                                                 name:FBSDKProfileDidChangeNotification
-                                               object:nil];
-}
-
-- (void)removeNotifications {
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:FBSDKProfileDidChangeNotification
-                                                  object:nil];
-}
-
-- (void)performFBSDKProfileNotification:(NSNotification *)notification {
-    [self.model fillFromFBSDKProfile];
-    self.model.state = TENModelLoaded;
+- (FBSDKLoginManagerRequestTokenHandler)handler {
+    return ^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+        TENUser *user = self.model;
+        
+        if (nil != error || result.isCancelled) {
+            user.state  = TENModelDidFailLoad;
+        } else {
+            user.userID = result.token.userID;
+            user.state = TENModelLoaded;
+        }
+    };
 }
 
 @end

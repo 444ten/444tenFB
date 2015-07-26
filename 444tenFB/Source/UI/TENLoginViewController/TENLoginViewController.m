@@ -50,7 +50,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
         [_user addObserver:self];
     }
     
-    [self.loginView fillWithModel:_user];;
+    [self.loginView fillWithModel:_user];
 }
 
 - (void)setContext:(TENLoginContext *)context {
@@ -71,6 +71,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
     [super viewDidLoad];
     
     self.title = TENLoginViewControllerTitle;
+    [self.loginView fillWithModel:self.user];;
     
     [self pushNextIfLogin];
 }
@@ -81,7 +82,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 - (IBAction)onLoginButton:(id)sender {
     if (nil != self.user) {
         self.user = nil;
-        [[FBSDKLoginManager new] logOut];
+//        [self.context cancel];
     } else {
         self.user = [TENUser new];
         self.context = [TENLoginContext new];
@@ -98,10 +99,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 - (void)pushNextIfLogin {
     FBSDKAccessToken *token = [FBSDKAccessToken currentAccessToken];
     if (nil != token) {
-        TENUser *user = [TENUser new];
-        [user fillFromFBSDKProfile];
-
-        self.user = user;
+        self.user = [TENUser new];
         [self pushNextController];
     }
 }

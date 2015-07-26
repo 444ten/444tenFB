@@ -13,5 +13,6 @@
 @interface TENLoginContext : TENContext
 @property (nonatomic, strong)   TENUser *model;
 
+- (NSArray *)permissions;
 
 @end

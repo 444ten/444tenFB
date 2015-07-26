@@ -17,6 +17,4 @@
 @property (nonatomic, strong)   NSString    *name;
 @property (nonatomic, strong)   TENFriends  *friends;
 
-- (void)fillFromFBSDKProfile;
-
 @end

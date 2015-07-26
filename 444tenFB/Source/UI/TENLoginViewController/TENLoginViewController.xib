@@ -55,6 +55,14 @@
                         <action selector="onFriendsButton:" destination="-1" eventType="touchUpInside" id="Q9z-R3-T5b"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JDu-6Q-lau">
+                    <rect key="frame" x="94" y="474" width="133" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" red="0.96896114864864868" green="0.96896114864864868" blue="0.96896114864864868" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <connections>
@@ -63,6 +71,7 @@
                 <outlet property="lastNameLabel" destination="9q1-OV-hib" id="egd-uW-oRH"/>
                 <outlet property="loginButton" destination="kk7-k2-uew" id="kEE-pQ-fSf"/>
                 <outlet property="profilePictureView" destination="Qe4-FC-z01" id="3UW-Oz-FKE"/>
+                <outlet property="userID" destination="JDu-6Q-lau" id="tL6-sZ-oiK"/>
             </connections>
             <point key="canvasLocation" x="380" y="548"/>
         </view>

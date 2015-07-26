@@ -27,15 +27,4 @@
     return self;
 }
 
-#pragma mark -
-#pragma mark - Public
-
-- (void)fillFromFBSDKProfile {
-    FBSDKProfile *profile = [FBSDKProfile currentProfile];
-    
-    self.userID = profile.userID;
-    self.firstName = profile.firstName;
-    self.lastName  = profile.lastName;
-}
-
 @end
