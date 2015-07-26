@@ -27,7 +27,7 @@
     TENUser *user = [TENUser new];
     
     TENLoginContext *loginContext = [TENLoginContext new];
-    loginContext.user = user;
+    loginContext.model = user;
     
     [loginContext execute];
     

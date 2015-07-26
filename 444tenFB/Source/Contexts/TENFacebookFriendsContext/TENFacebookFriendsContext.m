@@ -26,7 +26,9 @@
     }
     
     NSArray *array = result[@"data"];
-    TENFriends *friends = (TENFriends *)self.model;
+    TENFriends *friends = ((TENUser *)self.model).friends;
+    
+    [friends removeAllObjects];
     
     for (NSDictionary *object in array) {
         TENUser *user = [TENUser new];

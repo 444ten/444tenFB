@@ -11,13 +11,21 @@
 
 #import "TENUser.h"
 
+#import "TENFriends.h"
+
 @implementation TENUser
 
 #pragma mark -
-#pragma mark - Class Methods
-
-#pragma mark -
 #pragma mark - Initializations and Deallocations
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.friends = [TENFriends new];
+    }
+    
+    return self;
+}
 
 #pragma mark -
 #pragma mark - Public

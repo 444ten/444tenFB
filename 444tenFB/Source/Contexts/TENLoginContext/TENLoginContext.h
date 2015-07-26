@@ -11,7 +11,7 @@
 @class TENUser;
 
 @interface TENLoginContext : TENContext
-@property (nonatomic, strong)   TENUser *user;
+@property (nonatomic, strong)   TENUser *model;
 
 
 @end

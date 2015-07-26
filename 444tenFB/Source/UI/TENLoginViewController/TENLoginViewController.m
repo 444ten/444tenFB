@@ -23,7 +23,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 
 @interface TENLoginViewController ()
 @property (nonatomic, strong)   TENUser         *user;
-@property (nonatomic, strong)   TENLoginContext *loginContext;
+@property (nonatomic, strong)   TENLoginContext *context;
 
 - (void)pushNextIfLogin;
 - (void)pushNextController;
@@ -53,11 +53,15 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
     [self.loginView fillWithModel:_user];;
 }
 
-- (void)setLoginContext:(TENLoginContext *)loginContext {
-    _loginContext = loginContext;
-    
-    _loginContext.user = self.user;
-    [_loginContext execute];
+- (void)setContext:(TENLoginContext *)context {
+    if (context != _context) {
+        [_context cancel];
+        
+        _context = context;
+        
+        _context.model = self.user;
+        [_context execute];
+    }
 }
 
 #pragma mark -
@@ -80,7 +84,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
         [[FBSDKLoginManager new] logOut];
     } else {
         self.user = [TENUser new];
-        self.loginContext = [TENLoginContext new];
+        self.context = [TENLoginContext new];
     }
 }
 
@@ -104,6 +108,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 
 - (void)pushNextController {
     TENFriendsViewController *controller = [TENFriendsViewController new];
+    controller.user = self.user;
     
     [self.navigationController pushViewController:controller animated:NO];
 }
@@ -116,7 +121,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
     
     TENPerformOnMainThreadWithBlock(^{
         TENStrongifyAndReturnIfNil(self);
-        self.loginContext = nil;
+        self.context = nil;
         self.user = model;
     });
 }

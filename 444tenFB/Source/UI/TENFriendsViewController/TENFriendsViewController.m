@@ -31,6 +31,15 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
 #pragma mark -
 #pragma mark Accessors
 
+- (void)setUser:(TENUser *)user {
+    if (_user != user) {
+        [_user removeObserver:self];
+        
+        _user = user;
+        [_user addObserver:self];
+    }
+}
+
 - (void)setContext:(TENFacebookFriendsContext *)context {
     if (context != _context) {
         [_context cancel];
@@ -77,11 +86,11 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
     TENPerformOnMainThreadWithBlock(^{
         TENStrongifyAndReturnIfNil(self);
         
-        TENFriends *friends = self.user.friends;
-        for (NSUInteger iterator = 0; iterator < 1000; iterator++) {
-//            [friends addObject:friends[arc4random() % 4]];
-            [friends addObject:friends[0]];
-        }
+//        TENFriends *friends = self.user.friends;
+//        for (NSUInteger iterator = 0; iterator < 1000; iterator++) {
+////            [friends addObject:friends[arc4random() % 4]];
+//            [friends addObject:friends[0]];
+//        }
         
         [self.friendsView.friendsTableView reloadData];
     });
