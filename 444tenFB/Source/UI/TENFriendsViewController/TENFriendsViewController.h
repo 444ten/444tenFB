@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 #import "TENFriends.h"
+#import "TENViewController.h"
 
 @class TENUser;
 
-@interface TENFriendsViewController : UIViewController <TENModelObserver>
+@interface TENFriendsViewController : TENViewController <TENModelObserver>
 @property (nonatomic, strong)  TENUser  *user;
 
 @end

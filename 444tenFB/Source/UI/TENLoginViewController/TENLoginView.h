@@ -6,13 +6,15 @@
 //  Copyright (c) 2015 444ten. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <UIKit/UIKit.h>
+
+#import "TENView.h"
 
 @class TENUser;
 
-@interface TENLoginView : UIView
+@interface TENLoginView : TENView
 @property (nonatomic, strong)   IBOutlet FBSDKProfilePictureView    *profilePictureView;
 @property (nonatomic, strong)   IBOutlet UILabel                    *firstNameLabel;
 @property (nonatomic, strong)   IBOutlet UILabel                    *lastNameLabel;

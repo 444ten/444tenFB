@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TENFriendsView : UIView
+#import "TENView.h"
+
+@interface TENFriendsView : TENView
 @property (nonatomic, strong)   IBOutlet UITableView    *friendsTableView;
 
 @end
