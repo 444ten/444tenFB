@@ -11,9 +11,7 @@
 #import "TENFriends.h"
 #import "TENViewController.h"
 
-@class TENUser;
-
 @interface TENFriendsViewController : TENViewController <TENModelObserver>
-@property (nonatomic, strong)  TENUser  *user;
+@property (nonatomic, strong)  TENFriends  *friends;
 
 @end

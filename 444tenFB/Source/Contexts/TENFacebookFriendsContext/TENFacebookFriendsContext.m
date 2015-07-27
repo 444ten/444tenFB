@@ -26,7 +26,7 @@
     }
     
     NSArray *array = result[@"data"];
-    TENFriends *friends = ((TENUser *)self.model).friends;
+    TENFriends *friends = (TENFriends *)self.model;
     
     [friends removeAllObjects];
     

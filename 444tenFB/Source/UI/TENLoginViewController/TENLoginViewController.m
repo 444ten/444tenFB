@@ -82,7 +82,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 - (IBAction)onLoginButton:(id)sender {
     if (nil != self.user) {
         self.user = nil;
-//        [self.context cancel];
+        [self.context cancel];
     } else {
         self.user = [TENUser new];
         self.context = [TENLoginContext new];
@@ -106,7 +106,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 
 - (void)pushNextController {
     TENFriendsViewController *controller = [TENFriendsViewController new];
-    controller.user = self.user;
+    controller.friends = self.user.friends;
     
     [self.navigationController pushViewController:controller animated:NO];
 }
@@ -119,7 +119,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
     
     TENPerformOnMainThreadWithBlock(^{
         TENStrongifyAndReturnIfNil(self);
-        self.context = nil;
+//        self.context = nil;
         self.user = model;
     });
 }

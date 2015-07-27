@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>EDF3EAD6-4F99-4425-A5F4-F56C6848CC6D</string>
+	<string>13A78C9F-2549-4E3A-8391-368B7C7BC8EF</string>
 	<key>IDESourceControlProjectName</key>
 	<string>444tenFB</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>B33840DF3B45EB56164150B5890E772D2CE18D0A</key>
-		<string>https://github.com/444ten/444tenFB.git</string>
+		<string>https://github.com/444ten/444tenFB</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>444tenFB/444tenFB.xcworkspace</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/444ten/444tenFB.git</string>
+	<string>https://github.com/444ten/444tenFB</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

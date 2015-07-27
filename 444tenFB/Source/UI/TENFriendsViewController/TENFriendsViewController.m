@@ -31,12 +31,12 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
 #pragma mark -
 #pragma mark Accessors
 
-- (void)setUser:(TENUser *)user {
-    if (_user != user) {
-        [_user removeObserver:self];
+- (void)setFriends:(TENFriends *)friends {
+    if (friends != _friends) {
+        [_friends removeObserver:self];
         
-        _user = user;
-        [_user addObserver:self];
+        _friends = friends;
+        [_friends addObserver:self];
     }
 }
 
@@ -46,7 +46,7 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
         
         _context = context;
         
-        _context.model = self.user;
+        _context.model = self.friends;
         [_context execute];
     }
 }
@@ -64,14 +64,14 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.user.friends count];
+    return [self.friends count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TENFriendCell *cell = [tableView cellWithClass:[TENFriendCell class]];
     
-    TENUser *user = self.user.friends[indexPath.row];
+    TENUser *user = self.friends[indexPath.row];
     [cell fillWithModel:user];
     
     return cell;
