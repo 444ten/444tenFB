@@ -16,6 +16,7 @@
 #import "TENLoginView.h"
 #import "TENMacro.h"
 #import "TENThread.h"
+#import "TENFacebookUserContext.h"
 
 static NSString * const TENLoginViewControllerTitle  = @"Login";
 

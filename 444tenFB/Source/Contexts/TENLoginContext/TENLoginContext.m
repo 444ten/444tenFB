@@ -12,9 +12,12 @@
 #import "TENLoginContext.h"
 
 #import "TENUser.h"
+#import "TENFacebookUserContext.h"
 
 @interface TENLoginContext ()
-@property (nonatomic, readonly)     FBSDKLoginManager   *loginManager;
+@property (nonatomic, readonly) FBSDKLoginManager       *loginManager;
+@property (nonatomic, strong)   TENFacebookUserContext  *context;
+
 
 - (FBSDKLoginManagerRequestTokenHandler)handler;
 
@@ -27,6 +30,17 @@
 
 - (FBSDKLoginManager *)loginManager {
     return [FBSDKLoginManager new];
+}
+
+- (void)setContext:(TENFacebookUserContext *)context {
+    if (context != _context) {
+        [_context cancel];
+        
+        _context = context;
+        
+        _context.model = self.model;
+        [_context execute];
+    }
 }
 
 #pragma mark -
@@ -59,7 +73,7 @@
             user.state  = TENModelDidFailLoad;
         } else {
             user.userID = result.token.userID;
-            user.state = TENModelLoaded;
+            self.context = [TENFacebookUserContext new];
         }
     };
 }
