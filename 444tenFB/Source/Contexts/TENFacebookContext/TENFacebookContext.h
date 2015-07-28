@@ -10,6 +10,10 @@
 
 @class TENModel;
 
+static NSString * const kTENError   = @"error";
+static NSString * const kTENData    = @"data";
+static NSString * const kTENID      = @"id";
+
 @interface TENFacebookContext : TENContext
 @property (nonatomic, strong)   TENModel    *model;
 

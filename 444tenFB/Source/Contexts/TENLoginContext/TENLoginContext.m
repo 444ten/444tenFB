@@ -14,6 +14,9 @@
 #import "TENUser.h"
 #import "TENFacebookUserContext.h"
 
+static NSString * const kTENPermissionPublicProfile = @"public_profile";
+static NSString * const kTENPermissionUserFriends   = @"user_friends";
+
 @interface TENLoginContext ()
 @property (nonatomic, readonly) FBSDKLoginManager       *loginManager;
 @property (nonatomic, strong)   TENFacebookUserContext  *context;
@@ -47,7 +50,7 @@
 #pragma mark - Public
 
 - (NSArray *)permissions {
-    return @[@"public_profile", @"user_friends"];
+    return @[kTENPermissionPublicProfile, kTENPermissionUserFriends];
 }
 
 #pragma mark -

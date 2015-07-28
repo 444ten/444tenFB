@@ -51,7 +51,7 @@
 #pragma mark Public
 
 - (NSString *)graphPath {
-    return @"me";
+    return nil;
 }
 
 - (BOOL)parseResult:(NSDictionary *)result {

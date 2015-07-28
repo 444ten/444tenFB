@@ -11,30 +11,47 @@
 #import "TENOrderedModel.h"
 #import "TENUser.h"
 
+static NSString * const kTENGraphPath   = @"me/friends";
+static NSString * const kTENName        = @"name";
+
+@interface TENFacebookFriendsContext ()
+@property (nonatomic, readonly) TENOrderedModel *friends;
+
+@end
+
 @implementation TENFacebookFriendsContext
+
+@dynamic friends;
+
+#pragma mark -
+#pragma mark Accesors
+
+- (TENOrderedModel *)friends {
+    return (TENOrderedModel *)self.model;
+}
 
 #pragma mark -
 #pragma mark Overload
 
 - (NSString *)graphPath {
-    return @"me/friends";
+    return kTENGraphPath;
 }
 
 - (BOOL)parseResult:(NSDictionary *)result {
-    if (nil != result[@"error"]) {
+    if (nil != result[kTENError]) {
         return NO;
     }
     
-    NSArray *array = result[@"data"];
-    TENOrderedModel *friends = (TENOrderedModel *)self.model;
+    NSArray *array = result[kTENData];
+    TENOrderedModel *friends = self.friends;
     
     [friends removeAllObjects];
     
     for (NSDictionary *object in array) {
         TENUser *user = [TENUser new];
         
-        user.userID = object[@"id"];
-        user.name = object[@"name"];
+        user.userID = object[kTENID];
+        user.name = object[kTENName];
         
         [friends addObject:user];
     }

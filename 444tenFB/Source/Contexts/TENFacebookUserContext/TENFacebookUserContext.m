@@ -10,23 +10,41 @@
 
 #import "TENUser.h"
 
+static NSString * const kTENGraphPath   = @"me?fields=id,first_name,last_name";
+static NSString * const kTENFirstName   = @"first_name";
+static NSString * const kTENLastName    = @"last_name";
+
+@interface TENFacebookUserContext ()
+@property (nonatomic, readonly) TENUser *user;
+
+@end
+
 @implementation TENFacebookUserContext
+
+@dynamic user;
+
+#pragma mark -
+#pragma mark Accessors
+
+- (TENUser *)user {
+    return (TENUser *)self.model;
+}
 
 #pragma mark -
 #pragma mark Overload
 
 - (NSString *)graphPath {
-    return @"me?fields=id,first_name,last_name";
+    return kTENGraphPath;
 }
 
 - (BOOL)parseResult:(NSDictionary *)result {
-    if (nil != result[@"error"]) {
+    if (nil != result[kTENError]) {
         return NO;
     }
     
-    TENUser *user = (TENUser *)self.model;
-    user.firstName = result[@"first_name"];
-    user.lastName = result[@"last_name"];
+    TENUser *user = self.user;
+    user.firstName = result[kTENFirstName];
+    user.lastName = result[kTENLastName];
     
     return YES;
 }
