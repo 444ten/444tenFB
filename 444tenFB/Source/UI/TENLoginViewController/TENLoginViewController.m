@@ -26,8 +26,10 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 @property (nonatomic, strong)   TENUser         *user;
 @property (nonatomic, strong)   TENLoginContext *context;
 
-- (void)pushNextIfLogin;
-- (void)pushNextController;
+- (void)fillWithModel:(id)model;
+
+- (void)pushFriendsViewControllerIfLoggedIn;
+- (void)pushFriendsViewController;
 
 @end
 
@@ -38,6 +40,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 
 - (void)dealloc {
     self.user = nil;
+    self.context = nil;
 }
 
 #pragma mark -
@@ -49,9 +52,16 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
         
         _user = user;
         [_user addObserver:self];
+        
+        if (nil != _user) {
+            self.context = [TENLoginContext new];
+        } else {
+            [self.context logout];
+        }
+        
+        [self fillWithModel:_user];
     }
     
-    [self.loginView fillWithModel:_user];
 }
 
 - (void)setContext:(TENLoginContext *)context {
@@ -72,40 +82,35 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
     [super viewDidLoad];
     
     self.title = TENLoginViewControllerTitle;
-    [self.loginView fillWithModel:self.user];;
-    
-    [self pushNextIfLogin];
+    [self pushFriendsViewControllerIfLoggedIn];
 }
 
 #pragma mark -
 #pragma mark Interface Handling
 
-- (IBAction)onLoginButton:(id)sender {
-    if (nil != self.user) {
-        self.user = nil;
-        [self.context cancel];
-    } else {
-        self.user = [TENUser new];
-        self.context = [TENLoginContext new];
-    }
+- (IBAction)onLogInOutButton:(id)sender {
+    self.user = (nil == self.user) ? [TENUser new] : nil;
 }
 
 - (IBAction)onFriendsButton:(id)sender {
-    [self pushNextController];
+    [self pushFriendsViewController];
 }
 
 #pragma mark -
 #pragma mark Private
 
-- (void)pushNextIfLogin {
-    FBSDKAccessToken *token = [FBSDKAccessToken currentAccessToken];
-    if (nil != token) {
+- (void)fillWithModel:(id)model {
+    [self.loginView fillWithModel:model];
+}
+
+- (void)pushFriendsViewControllerIfLoggedIn {
+    if (![FBSDKAccessToken currentAccessToken]) {
         self.user = [TENUser new];
-        [self pushNextController];
+        [self pushFriendsViewController];
     }
 }
 
-- (void)pushNextController {
+- (void)pushFriendsViewController {
     TENFriendsViewController *controller = [TENFriendsViewController new];
     controller.friends = self.user.friends;
     
@@ -121,7 +126,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
     TENPerformOnMainThreadWithBlock(^{
         TENStrongifyAndReturnIfNil(self);
         self.context = nil;
-        self.user = model;
+        [self fillWithModel:model];
     });
 }
 

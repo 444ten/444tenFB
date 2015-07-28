@@ -18,7 +18,7 @@
 @property (nonatomic, strong)   IBOutlet FBSDKProfilePictureView    *profilePictureView;
 @property (nonatomic, strong)   IBOutlet UILabel                    *firstNameLabel;
 @property (nonatomic, strong)   IBOutlet UILabel                    *lastNameLabel;
-@property (nonatomic, strong)   IBOutlet UIButton                   *loginButton;
+@property (nonatomic, strong)   IBOutlet UIButton                   *logInOutButton;
 @property (nonatomic, strong)   IBOutlet UIButton                   *friendsButton;
 @property (nonatomic, strong)   IBOutlet UILabel                    *userID;
 

@@ -42,7 +42,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="onLoginButton:" destination="-1" eventType="touchUpInside" id="9uA-lb-JMi"/>
+                        <action selector="onLogInOutButton:" destination="-1" eventType="touchUpInside" id="ro2-9s-53t"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Szs-aV-H1A">
@@ -60,7 +60,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" red="0.96896114864864868" green="0.96896114864864868" blue="0.96896114864864868" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -69,7 +69,7 @@
                 <outlet property="firstNameLabel" destination="RKZ-17-h6K" id="tPl-DN-W7o"/>
                 <outlet property="friendsButton" destination="Szs-aV-H1A" id="kOP-LL-eGg"/>
                 <outlet property="lastNameLabel" destination="9q1-OV-hib" id="egd-uW-oRH"/>
-                <outlet property="loginButton" destination="kk7-k2-uew" id="kEE-pQ-fSf"/>
+                <outlet property="logInOutButton" destination="kk7-k2-uew" id="BDr-44-QUc"/>
                 <outlet property="profilePictureView" destination="Qe4-FC-z01" id="3UW-Oz-FKE"/>
                 <outlet property="userID" destination="JDu-6Q-lau" id="tL6-sZ-oiK"/>
             </connections>

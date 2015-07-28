@@ -53,12 +53,18 @@ static NSString * const kTENPermissionUserFriends   = @"user_friends";
     return @[kTENPermissionPublicProfile, kTENPermissionUserFriends];
 }
 
+- (void)logout {
+    [[FBSDKLoginManager new] logOut];
+}
+
 #pragma mark -
 #pragma mark - Overload
 
 - (void)execute {
-    self.model.state = TENModelWillLoad;
-    [self.loginManager logInWithReadPermissions:[self permissions] handler:[self handler]];
+    if (![FBSDKAccessToken currentAccessToken]) {
+        self.model.state = TENModelWillLoad;
+        [self.loginManager logInWithReadPermissions:[self permissions] handler:[self handler]];
+    }    
 }
 
 - (void)cancel {

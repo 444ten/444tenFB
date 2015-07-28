@@ -13,6 +13,4 @@
 
 @interface TENLoginViewController : TENViewController <TENModelObserver>
 
-- (IBAction)onLoginButton:(id)sender;
-
 @end

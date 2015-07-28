@@ -37,6 +37,8 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
         
         _friends = friends;
         [_friends addObserver:self];
+        
+        self.context = [TENFacebookFriendsContext new];
     }
 }
 
@@ -57,7 +59,6 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.context = [TENFacebookFriendsContext new];
 }
 
 #pragma mark -

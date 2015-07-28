@@ -21,8 +21,8 @@ static NSString * const kLogout = @"Log out";
 - (void)fillWithModel:(TENUser *)model {
     self.friendsButton.hidden = (nil == model);
     
-    [self.loginButton setTitle:(nil != model) ? kLogout : kLogin
-                      forState:UIControlStateNormal];
+    [self.logInOutButton setTitle:(nil != model) ? kLogout : kLogin
+                         forState:UIControlStateNormal];
     
     self.firstNameLabel.text = model.firstName;
     self.lastNameLabel.text = model.lastName;
