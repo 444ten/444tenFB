@@ -8,13 +8,13 @@
 
 #import "TENModel.h"
 
-@class TENFriends;
+@class TENOrderedModel;
 
 @interface TENUser : TENModel
-@property (nonatomic, strong)   NSString    *userID;
-@property (nonatomic, strong)   NSString    *firstName;
-@property (nonatomic, strong)   NSString    *lastName;
-@property (nonatomic, strong)   NSString    *name;
-@property (nonatomic, strong)   TENFriends  *friends;
+@property (nonatomic, strong)   NSString        *userID;
+@property (nonatomic, strong)   NSString        *firstName;
+@property (nonatomic, strong)   NSString        *lastName;
+@property (nonatomic, strong)   NSString        *name;
+@property (nonatomic, strong)   TENOrderedModel *friends;
 
 @end

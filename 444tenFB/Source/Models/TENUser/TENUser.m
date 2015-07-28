@@ -11,7 +11,7 @@
 
 #import "TENUser.h"
 
-#import "TENFriends.h"
+#import "TENOrderedModel.h"
 
 @implementation TENUser
 
@@ -21,7 +21,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.friends = [TENFriends new];
+        self.friends = [TENOrderedModel new];
     }
     
     return self;

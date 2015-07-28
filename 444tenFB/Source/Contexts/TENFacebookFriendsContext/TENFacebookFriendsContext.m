@@ -8,7 +8,7 @@
 
 #import "TENFacebookFriendsContext.h"
 
-#import "TENFriends.h"
+#import "TENOrderedModel.h"
 #import "TENUser.h"
 
 @implementation TENFacebookFriendsContext
@@ -26,7 +26,7 @@
     }
     
     NSArray *array = result[@"data"];
-    TENFriends *friends = (TENFriends *)self.model;
+    TENOrderedModel *friends = (TENOrderedModel *)self.model;
     
     [friends removeAllObjects];
     

@@ -120,7 +120,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
     
     TENPerformOnMainThreadWithBlock(^{
         TENStrongifyAndReturnIfNil(self);
-//        self.context = nil;
+        self.context = nil;
         self.user = model;
     });
 }

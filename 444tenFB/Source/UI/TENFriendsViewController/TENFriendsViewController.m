@@ -31,7 +31,7 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
 #pragma mark -
 #pragma mark Accessors
 
-- (void)setFriends:(TENFriends *)friends {
+- (void)setFriends:(TENOrderedModel *)friends {
     if (friends != _friends) {
         [_friends removeObserver:self];
         
@@ -86,7 +86,7 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
     TENPerformOnMainThreadWithBlock(^{
         TENStrongifyAndReturnIfNil(self);
         
-//        TENFriends *friends = self.user.friends;
+//        TENOrderedModel *friends = self.user.friends;
 //        for (NSUInteger iterator = 0; iterator < 1000; iterator++) {
 ////            [friends addObject:friends[arc4random() % 4]];
 //            [friends addObject:friends[0]];

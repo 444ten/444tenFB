@@ -59,7 +59,7 @@
 }
 
 - (void)cancel {
-    [self.loginManager logOut];
+
 }
 
 #pragma mark -

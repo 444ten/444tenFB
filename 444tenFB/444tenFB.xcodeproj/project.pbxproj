@@ -41,7 +41,6 @@
 		6C613FE81B603BCE001C0F23 /* TENThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613FE71B603BCE001C0F23 /* TENThread.m */; };
 		6CF9BB051B61125700D409EC /* TENFriendsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9BB041B61125700D409EC /* TENFriendsView.m */; };
 		6CF9BB0D1B6117A800D409EC /* TENOrderedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9BB0C1B6117A800D409EC /* TENOrderedModel.m */; };
-		6CF9BB151B611B6000D409EC /* TENFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9BB141B611B6000D409EC /* TENFriends.m */; };
 		6CF9BB1B1B61291200D409EC /* TENTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9BB1A1B61291200D409EC /* TENTableViewCell.m */; };
 		6CF9BB1E1B61295300D409EC /* TENFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9BB1D1B61295300D409EC /* TENFriendCell.m */; };
 		6CF9BB201B61296500D409EC /* TENFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF9BB1F1B61296500D409EC /* TENFriendCell.xib */; };
@@ -130,8 +129,6 @@
 		6CF9BB041B61125700D409EC /* TENFriendsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENFriendsView.m; sourceTree = "<group>"; };
 		6CF9BB0B1B6117A800D409EC /* TENOrderedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENOrderedModel.h; sourceTree = "<group>"; };
 		6CF9BB0C1B6117A800D409EC /* TENOrderedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENOrderedModel.m; sourceTree = "<group>"; };
-		6CF9BB131B611B6000D409EC /* TENFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENFriends.h; sourceTree = "<group>"; };
-		6CF9BB141B611B6000D409EC /* TENFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENFriends.m; sourceTree = "<group>"; };
 		6CF9BB191B61291200D409EC /* TENTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENTableViewCell.h; sourceTree = "<group>"; };
 		6CF9BB1A1B61291200D409EC /* TENTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENTableViewCell.m; sourceTree = "<group>"; };
 		6CF9BB1C1B61295300D409EC /* TENFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENFriendCell.h; sourceTree = "<group>"; };
@@ -261,7 +258,6 @@
 		6C613F0C1B5AD79F001C0F23 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6CF9BB121B611B6000D409EC /* TENFriends */,
 				6C613FE11B602FBD001C0F23 /* TENModel */,
 				6C613FB01B5E6FAC001C0F23 /* TENUser */,
 			);
@@ -561,15 +557,6 @@
 			path = TENOrderedModel;
 			sourceTree = "<group>";
 		};
-		6CF9BB121B611B6000D409EC /* TENFriends */ = {
-			isa = PBXGroup;
-			children = (
-				6CF9BB131B611B6000D409EC /* TENFriends.h */,
-				6CF9BB141B611B6000D409EC /* TENFriends.m */,
-			);
-			path = TENFriends;
-			sourceTree = "<group>";
-		};
 		6CF9BB161B61285100D409EC /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -810,7 +797,6 @@
 				6CF9BB1B1B61291200D409EC /* TENTableViewCell.m in Sources */,
 				6CF9BB281B62461C00D409EC /* TENFacebookFriendsContext.m in Sources */,
 				6C0829B91B66784F00DFEE03 /* TENFacebookUserContext.m in Sources */,
-				6CF9BB151B611B6000D409EC /* TENFriends.m in Sources */,
 				766135441B652530001903FE /* TENViewController.m in Sources */,
 				6C613F391B5AD93E001C0F23 /* TENChangedPath.m in Sources */,
 				6CF9BB0D1B6117A800D409EC /* TENOrderedModel.m in Sources */,
