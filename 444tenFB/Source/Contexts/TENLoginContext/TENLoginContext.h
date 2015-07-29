@@ -15,6 +15,4 @@
 
 - (NSArray *)permissions;
 
-- (void)logout;
-
 @end

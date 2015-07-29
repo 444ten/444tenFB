@@ -5,8 +5,9 @@
 //  Created by Andrey Ten on 7/22/15.
 //  Copyright (c) 2015 444ten. All rights reserved.
 //
-
-// testUserEmail:tom_xvnxsgq_cruise@tfbnw.net password:123
+// testUserEmail:
+//  tom_xvnxsgq_cruise@tfbnw.net
+// password:123
 
 #import "TENFriendsViewController.h"
 

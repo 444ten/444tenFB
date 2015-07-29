@@ -10,6 +10,7 @@
 
 #import "TENFacebookContext.h"
 
+#import "TENMacro.h"
 #import "TENModel.h"
 
 @interface TENFacebookContext ()
@@ -54,7 +55,7 @@
     return nil;
 }
 
-- (BOOL)parseResult:(NSDictionary *)result {
+- (BOOL)parseResult:(id)result {
     return NO;
 }
 
@@ -62,7 +63,9 @@
 #pragma mark Private
 
 - (FBSDKGraphRequestHandler)completionHandler {
+    TENWeakify(self);
     return ^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+        TENStrongify(self);
         self.model.state = (nil == error  && [self parseResult:result]) ? TENModelLoaded : TENModelDidFailLoad;
     };
 }

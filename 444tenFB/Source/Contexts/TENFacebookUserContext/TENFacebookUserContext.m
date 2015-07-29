@@ -43,6 +43,7 @@ static NSString * const kTENLastName    = @"last_name";
     }
     
     TENUser *user = self.user;
+    user.userID = result[kTENID];
     user.firstName = result[kTENFirstName];
     user.lastName = result[kTENLastName];
     

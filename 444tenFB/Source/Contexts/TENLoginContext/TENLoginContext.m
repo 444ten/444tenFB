@@ -11,8 +11,9 @@
 
 #import "TENLoginContext.h"
 
-#import "TENUser.h"
 #import "TENFacebookUserContext.h"
+#import "TENMacro.h"
+#import "TENUser.h"
 
 static NSString * const kTENPermissionPublicProfile = @"public_profile";
 static NSString * const kTENPermissionUserFriends   = @"user_friends";
@@ -21,6 +22,7 @@ static NSString * const kTENPermissionUserFriends   = @"user_friends";
 @property (nonatomic, readonly) FBSDKLoginManager       *loginManager;
 @property (nonatomic, strong)   TENFacebookUserContext  *context;
 
+- (void)loadModel;
 
 - (FBSDKLoginManagerRequestTokenHandler)handler;
 
@@ -53,18 +55,16 @@ static NSString * const kTENPermissionUserFriends   = @"user_friends";
     return @[kTENPermissionPublicProfile, kTENPermissionUserFriends];
 }
 
-- (void)logout {
-    [[FBSDKLoginManager new] logOut];
-}
-
 #pragma mark -
 #pragma mark - Overload
 
 - (void)execute {
-    if (![FBSDKAccessToken currentAccessToken]) {
-        self.model.state = TENModelWillLoad;
+    self.model.state = TENModelWillLoad;
+    if ([FBSDKAccessToken currentAccessToken]) {
+        [self loadModel];
+    } else {
         [self.loginManager logInWithReadPermissions:[self permissions] handler:[self handler]];
-    }    
+    }
 }
 
 - (void)cancel {
@@ -74,15 +74,20 @@ static NSString * const kTENPermissionUserFriends   = @"user_friends";
 #pragma mark -
 #pragma mark - Private
 
+- (void)loadModel {
+    self.context = [TENFacebookUserContext new];
+}
+
 - (FBSDKLoginManagerRequestTokenHandler)handler {
+    TENWeakify(self);
     return ^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+        TENStrongify(self);
         TENUser *user = self.model;
         
         if (nil != error || result.isCancelled) {
             user.state  = TENModelDidFailLoad;
         } else {
-            user.userID = result.token.userID;
-            self.context = [TENFacebookUserContext new];
+            [self loadModel];
         }
     };
 }

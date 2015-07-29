@@ -28,7 +28,6 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 
 - (void)fillWithModel:(id)model;
 
-- (void)pushFriendsViewControllerIfLoggedIn;
 - (void)pushFriendsViewController;
 
 @end
@@ -53,13 +52,11 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
         _user = user;
         [_user addObserver:self];
         
+        [self fillWithModel:_user];
+        
         if (nil != _user) {
             self.context = [TENLoginContext new];
-        } else {
-            [self.context logout];
         }
-        
-        [self fillWithModel:_user];
     }
     
 }
@@ -80,16 +77,25 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.title = TENLoginViewControllerTitle;
-    [self pushFriendsViewControllerIfLoggedIn];
+    
+    self.user = [TENUser new];
 }
 
 #pragma mark -
 #pragma mark Interface Handling
 
 - (IBAction)onLogInOutButton:(id)sender {
-    self.user = (nil == self.user) ? [TENUser new] : nil;
+    TENUser *user = self.user;
+    
+    if (TENModelLoaded == user.state) {
+        [[FBSDKLoginManager new] logOut];
+        user = nil;
+    } else {
+        user = [TENUser new];
+    }
+    
+    self.user = user;
 }
 
 - (IBAction)onFriendsButton:(id)sender {
@@ -103,12 +109,6 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
     [self.loginView fillWithModel:model];
 }
 
-- (void)pushFriendsViewControllerIfLoggedIn {
-    if (![FBSDKAccessToken currentAccessToken]) {
-        self.user = [TENUser new];
-        [self pushFriendsViewController];
-    }
-}
 
 - (void)pushFriendsViewController {
     TENFriendsViewController *controller = [TENFriendsViewController new];
@@ -127,6 +127,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
         TENStrongifyAndReturnIfNil(self);
         self.context = nil;
         [self fillWithModel:model];
+        [self pushFriendsViewController];
     });
 }
 

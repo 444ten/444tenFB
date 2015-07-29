@@ -28,9 +28,7 @@ static NSString * const kLogout = @"Log out";
     self.lastNameLabel.text = model.lastName;
     self.userID.text = model.userID;
 
-    FBSDKProfilePictureView *profilePictureView = self.profilePictureView;
-    profilePictureView.profileID = model.userID;
-    [profilePictureView setNeedsImageUpdate];
+    self.profilePictureView.profileID = model.userID;
 }
 
 @end
