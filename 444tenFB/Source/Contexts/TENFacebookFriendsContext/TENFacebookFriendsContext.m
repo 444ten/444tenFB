@@ -8,11 +8,11 @@
 
 #import "TENFacebookFriendsContext.h"
 
+#import "TENFacebookKey.h"
 #import "TENOrderedModel.h"
 #import "TENUser.h"
 
 static NSString * const kTENGraphPath   = @"me/friends";
-static NSString * const kTENName        = @"name";
 
 @interface TENFacebookFriendsContext ()
 @property (nonatomic, readonly) TENOrderedModel *friends;

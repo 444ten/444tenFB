@@ -11,10 +11,10 @@
 @class TENOrderedModel;
 
 @interface TENUser : TENModel
-@property (nonatomic, strong)   NSString        *userID;
-@property (nonatomic, strong)   NSString        *firstName;
-@property (nonatomic, strong)   NSString        *lastName;
-@property (nonatomic, strong)   NSString        *name;
+@property (nonatomic, copy)     NSString        *userID;
+@property (nonatomic, copy)     NSString        *firstName;
+@property (nonatomic, copy)     NSString        *lastName;
+@property (nonatomic, copy)     NSString        *name;
 @property (nonatomic, strong)   TENOrderedModel *friends;
 
 @end

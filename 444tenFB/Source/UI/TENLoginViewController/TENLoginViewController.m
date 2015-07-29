@@ -28,7 +28,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 
 - (void)fillWithModel:(id)model;
 
-- (void)pushFriendsViewController;
+- (void)pushFriendsViewControllerAnimated:(BOOL)animated;
 
 @end
 
@@ -99,7 +99,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 }
 
 - (IBAction)onFriendsButton:(id)sender {
-    [self pushFriendsViewController];
+    [self pushFriendsViewControllerAnimated:YES];
 }
 
 #pragma mark -
@@ -110,11 +110,11 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 }
 
 
-- (void)pushFriendsViewController {
+- (void)pushFriendsViewControllerAnimated:(BOOL)animated {
     TENFriendsViewController *controller = [TENFriendsViewController new];
     controller.user = self.user;
     
-    [self.navigationController pushViewController:controller animated:NO];
+    [self.navigationController pushViewController:controller animated:animated];
 }
 
 #pragma mark -
@@ -127,7 +127,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
         TENStrongifyAndReturnIfNil(self);
         self.context = nil;
         [self fillWithModel:model];
-        [self pushFriendsViewController];
+        [self pushFriendsViewControllerAnimated:NO];
     });
 }
 

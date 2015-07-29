@@ -8,11 +8,10 @@
 
 #import "TENFacebookUserContext.h"
 
+#import "TENFacebookKey.h"
 #import "TENUser.h"
 
 static NSString * const kTENGraphPath   = @"me?fields=id,first_name,last_name";
-static NSString * const kTENFirstName   = @"first_name";
-static NSString * const kTENLastName    = @"last_name";
 
 @interface TENFacebookUserContext ()
 @property (nonatomic, readonly) TENUser *user;

@@ -11,12 +11,10 @@
 
 #import "TENLoginContext.h"
 
+#import "TENFacebookKey.h"
 #import "TENFacebookUserContext.h"
 #import "TENMacro.h"
 #import "TENUser.h"
-
-static NSString * const kTENPermissionPublicProfile = @"public_profile";
-static NSString * const kTENPermissionUserFriends   = @"user_friends";
 
 @interface TENLoginContext ()
 @property (nonatomic, readonly) FBSDKLoginManager       *loginManager;
