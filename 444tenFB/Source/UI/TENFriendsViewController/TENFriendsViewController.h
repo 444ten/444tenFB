@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TENOrderedModel.h"
 #import "TENViewController.h"
+#import "TENUser.h"
 
 @interface TENFriendsViewController : TENViewController <TENModelObserver>
-@property (nonatomic, strong)  TENOrderedModel  *friends;
+@property (nonatomic, strong)  TENUser  *user;
 
 @end

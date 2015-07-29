@@ -18,27 +18,30 @@
 #import "TENFriendsView.h"
 #import "TENMacro.h"
 #import "TENThread.h"
-#import "TENUser.h"
+#import "TENOrderedModel.h"
 
 TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFriendsView);
 
 @interface TENFriendsViewController ()
 @property (nonatomic, strong)   TENFacebookFriendsContext   *context;
+@property (nonatomic, readonly) TENOrderedModel             *friends;
 
 @end
 
 @implementation TENFriendsViewController
 
+@dynamic friends;
+
 #pragma mark -
 #pragma mark Accessors
 
-- (void)setFriends:(TENOrderedModel *)friends {
-    if (friends != _friends) {
-        [_friends removeObserver:self];
+- (void)setUser:(TENUser *)user {
+    if (user != _user) {
+        [_user.friends removeObserver:self];
         
-        _friends = friends;
-        [_friends addObserver:self];
-        
+        _user = user;
+        [_user.friends addObserver:self];
+
         self.context = [TENFacebookFriendsContext new];
     }
 }
@@ -52,6 +55,10 @@ TENViewControllerBaseViewProperty(TENFriendsViewController, friendsView, TENFrie
         _context.model = self.friends;
         [_context execute];
     }
+}
+
+- (TENOrderedModel *)friends {
+    return self.user.friends;
 }
 
 #pragma mark -

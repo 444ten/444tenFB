@@ -112,7 +112,7 @@ TENViewControllerBaseViewProperty(TENLoginViewController, loginView, TENLoginVie
 
 - (void)pushFriendsViewController {
     TENFriendsViewController *controller = [TENFriendsViewController new];
-    controller.friends = self.user.friends;
+    controller.user = self.user;
     
     [self.navigationController pushViewController:controller animated:NO];
 }
