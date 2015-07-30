@@ -10,7 +10,7 @@
 
 #import "TENFacebookContext.h"
 
-#import "TENFacebookKey.h"
+#import "TENFacebookKeys.h"
 #import "TENMacro.h"
 #import "TENModel.h"
 

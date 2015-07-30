@@ -8,7 +8,7 @@
 
 #import "TENFacebookFriendsContext.h"
 
-#import "TENFacebookKey.h"
+#import "TENFacebookKeys.h"
 #import "TENOrderedModel.h"
 #import "TENUser.h"
 

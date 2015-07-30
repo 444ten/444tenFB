@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C0829B91B66784F00DFEE03 /* TENFacebookUserContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0829B81B66784F00DFEE03 /* TENFacebookUserContext.m */; };
-		6C0829BD1B69133B00DFEE03 /* TENFacebookKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0829BC1B69133B00DFEE03 /* TENFacebookKey.m */; };
+		6C0829BD1B69133B00DFEE03 /* TENFacebookKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0829BC1B69133B00DFEE03 /* TENFacebookKeys.m */; };
 		6C0829C91B6A3B8500DFEE03 /* TENImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0829C81B6A3B8500DFEE03 /* TENImageModel.m */; };
 		6C0829CD1B6A3BE500DFEE03 /* TENObjectCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0829CC1B6A3BE500DFEE03 /* TENObjectCache.m */; };
 		6C0829D01B6A3DA100DFEE03 /* TENUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0829CF1B6A3DA100DFEE03 /* TENUserView.m */; };
@@ -69,8 +69,8 @@
 		03BF4AE552D78A67CEBAC699 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6C0829B71B66784F00DFEE03 /* TENFacebookUserContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENFacebookUserContext.h; sourceTree = "<group>"; };
 		6C0829B81B66784F00DFEE03 /* TENFacebookUserContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENFacebookUserContext.m; sourceTree = "<group>"; };
-		6C0829BB1B69133B00DFEE03 /* TENFacebookKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENFacebookKey.h; sourceTree = "<group>"; };
-		6C0829BC1B69133B00DFEE03 /* TENFacebookKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENFacebookKey.m; sourceTree = "<group>"; };
+		6C0829BB1B69133B00DFEE03 /* TENFacebookKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENFacebookKeys.h; sourceTree = "<group>"; };
+		6C0829BC1B69133B00DFEE03 /* TENFacebookKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENFacebookKeys.m; sourceTree = "<group>"; };
 		6C0829C71B6A3B8500DFEE03 /* TENImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENImageModel.h; sourceTree = "<group>"; };
 		6C0829C81B6A3B8500DFEE03 /* TENImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENImageModel.m; sourceTree = "<group>"; };
 		6C0829CB1B6A3BE500DFEE03 /* TENObjectCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENObjectCache.h; sourceTree = "<group>"; };
@@ -515,8 +515,8 @@
 				6CF9BB211B62344500D409EC /* TENFacebookContext */,
 				6C613FC51B5FD34E001C0F23 /* TENContext */,
 				6C613FB91B5FC7E9001C0F23 /* TENLoginContext */,
-				6C0829BB1B69133B00DFEE03 /* TENFacebookKey.h */,
-				6C0829BC1B69133B00DFEE03 /* TENFacebookKey.m */,
+				6C0829BB1B69133B00DFEE03 /* TENFacebookKeys.h */,
+				6C0829BC1B69133B00DFEE03 /* TENFacebookKeys.m */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
@@ -848,7 +848,7 @@
 				6C613FA11B5BE776001C0F23 /* TSTImageModel.m in Sources */,
 				6C613F331B5AD8BB001C0F23 /* UIView+TENExtensions.m in Sources */,
 				6C0829C91B6A3B8500DFEE03 /* TENImageModel.m in Sources */,
-				6C0829BD1B69133B00DFEE03 /* TENFacebookKey.m in Sources */,
+				6C0829BD1B69133B00DFEE03 /* TENFacebookKeys.m in Sources */,
 				6C613FAC1B5C0028001C0F23 /* TSTFriendView.m in Sources */,
 				6C613EE01B5AD490001C0F23 /* TENAppDelegate.m in Sources */,
 				6CF9BB051B61125700D409EC /* TENFriendsView.m in Sources */,

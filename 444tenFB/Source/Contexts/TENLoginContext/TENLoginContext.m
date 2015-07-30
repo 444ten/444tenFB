@@ -11,7 +11,7 @@
 
 #import "TENLoginContext.h"
 
-#import "TENFacebookKey.h"
+#import "TENFacebookKeys.h"
 #import "TENFacebookUserContext.h"
 #import "TENMacro.h"
 #import "TENUser.h"
