@@ -57,6 +57,13 @@
 #pragma mark - Overload
 
 - (void)execute {
+    TENModelState state = self.model.state;
+    if (TENModelWillLoad == state || TENModelLoaded == state) {
+        self.model.state = state;
+        return;
+    }
+
+    
     self.model.state = TENModelWillLoad;
     if ([FBSDKAccessToken currentAccessToken]) {
         [self loadModel];
