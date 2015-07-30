@@ -11,6 +11,7 @@
 		6C0829BD1B69133B00DFEE03 /* TENFacebookKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0829BC1B69133B00DFEE03 /* TENFacebookKey.m */; };
 		6C0829C91B6A3B8500DFEE03 /* TENImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0829C81B6A3B8500DFEE03 /* TENImageModel.m */; };
 		6C0829CD1B6A3BE500DFEE03 /* TENObjectCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0829CC1B6A3BE500DFEE03 /* TENObjectCache.m */; };
+		6C0829D01B6A3DA100DFEE03 /* TENUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0829CF1B6A3DA100DFEE03 /* TENUserView.m */; };
 		6C613EE01B5AD490001C0F23 /* TENAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613EDF1B5AD490001C0F23 /* TENAppDelegate.m */; };
 		6C613F031B5AD709001C0F23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C613F011B5AD709001C0F23 /* main.m */; };
 		6C613F081B5AD715001C0F23 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C613F051B5AD715001C0F23 /* LaunchScreen.xib */; };
@@ -74,6 +75,8 @@
 		6C0829C81B6A3B8500DFEE03 /* TENImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENImageModel.m; sourceTree = "<group>"; };
 		6C0829CB1B6A3BE500DFEE03 /* TENObjectCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENObjectCache.h; sourceTree = "<group>"; };
 		6C0829CC1B6A3BE500DFEE03 /* TENObjectCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENObjectCache.m; sourceTree = "<group>"; };
+		6C0829CE1B6A3DA100DFEE03 /* TENUserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENUserView.h; sourceTree = "<group>"; };
+		6C0829CF1B6A3DA100DFEE03 /* TENUserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENUserView.m; sourceTree = "<group>"; };
 		6C613ED71B5AD490001C0F23 /* 444tenFB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 444tenFB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C613EDE1B5AD490001C0F23 /* TENAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TENAppDelegate.h; sourceTree = "<group>"; };
 		6C613EDF1B5AD490001C0F23 /* TENAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TENAppDelegate.m; sourceTree = "<group>"; };
@@ -544,6 +547,8 @@
 				6C613FD51B602186001C0F23 /* TENLoginViewController.xib */,
 				6C613FD81B60220F001C0F23 /* TENLoginView.h */,
 				6C613FD91B60220F001C0F23 /* TENLoginView.m */,
+				6C0829CE1B6A3DA100DFEE03 /* TENUserView.h */,
+				6C0829CF1B6A3DA100DFEE03 /* TENUserView.m */,
 			);
 			path = TENLoginViewController;
 			sourceTree = "<group>";
@@ -815,6 +820,7 @@
 				6C613F321B5AD8BB001C0F23 /* UITableView+TENExtensions.m in Sources */,
 				6C613FD61B602186001C0F23 /* TENLoginViewController.m in Sources */,
 				6CF9BB241B62345A00D409EC /* TENFacebookContext.m in Sources */,
+				6C0829D01B6A3DA100DFEE03 /* TENUserView.m in Sources */,
 				6C613F341B5AD8BB001C0F23 /* UIViewController+TENExtensions.m in Sources */,
 				6C0829CD1B6A3BE500DFEE03 /* TENObjectCache.m in Sources */,
 				6C613FDA1B60220F001C0F23 /* TENLoginView.m in Sources */,
