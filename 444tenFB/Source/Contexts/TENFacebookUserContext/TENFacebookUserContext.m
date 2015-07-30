@@ -11,7 +11,7 @@
 #import "TENFacebookKey.h"
 #import "TENUser.h"
 
-static NSString * const kTENGraphPath   = @"me?fields=id,first_name,last_name";
+static NSString * const kTENGraphPath   = @"me?fields=id,first_name,last_name,picture";
 
 @interface TENFacebookUserContext ()
 @property (nonatomic, readonly) TENUser *user;
@@ -45,6 +45,10 @@ static NSString * const kTENGraphPath   = @"me?fields=id,first_name,last_name";
     user.userID = result[kTENID];
     user.firstName = result[kTENFirstName];
     user.lastName = result[kTENLastName];
+    
+    NSString *picturePath = result[kTENPicture][kTENData][kTENUrl];
+    
+    user.pictureURL = [NSURL URLWithString:picturePath];
     
     return YES;
 }

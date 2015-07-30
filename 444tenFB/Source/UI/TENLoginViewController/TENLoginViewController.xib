@@ -14,11 +14,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" id="Qe4-FC-z01" customClass="FBSDKProfilePictureView">
-                    <rect key="frame" x="91" y="108" width="139" height="105"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RKZ-17-h6K">
                     <rect key="frame" x="120" y="260" width="81" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -63,6 +58,20 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" id="mfA-KJ-0Cg" customClass="TENUserView">
+                    <rect key="frame" x="97" y="105" width="126" height="111"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="xGV-IX-r0H">
+                            <rect key="frame" x="0.0" y="0.0" width="126" height="111"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="userImageView" destination="xGV-IX-r0H" id="f85-HU-wdH"/>
+                    </connections>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <connections>
@@ -70,8 +79,8 @@
                 <outlet property="friendsButton" destination="Szs-aV-H1A" id="kOP-LL-eGg"/>
                 <outlet property="lastNameLabel" destination="9q1-OV-hib" id="egd-uW-oRH"/>
                 <outlet property="logInOutButton" destination="kk7-k2-uew" id="BDr-44-QUc"/>
-                <outlet property="profilePictureView" destination="Qe4-FC-z01" id="3UW-Oz-FKE"/>
                 <outlet property="userID" destination="JDu-6Q-lau" id="tL6-sZ-oiK"/>
+                <outlet property="userView" destination="mfA-KJ-0Cg" id="tAb-1l-yTi"/>
             </connections>
             <point key="canvasLocation" x="380" y="548"/>
         </view>

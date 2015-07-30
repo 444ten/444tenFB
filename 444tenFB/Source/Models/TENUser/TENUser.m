@@ -11,9 +11,12 @@
 
 #import "TENUser.h"
 
+#import "TENImageModel.h"
 #import "TENOrderedModel.h"
 
 @implementation TENUser
+
+@dynamic imageModel;
 
 #pragma mark -
 #pragma mark - Initializations and Deallocations
@@ -25,6 +28,13 @@
     }
     
     return self;
+}
+
+#pragma mark -
+#pragma mark Accessors
+
+- (TENImageModel *)imageModel {
+    return [TENImageModel imageWithURL:self.pictureURL];
 }
 
 @end

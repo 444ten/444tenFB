@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TENUserView : UIView
+#import "TENImageModel.h"
+
+@interface TENUserView : UIView <TENModelObserver>
+@property (nonatomic, strong)   IBOutlet UIImageView    *userImageView;
+
+@property (nonatomic, strong)   TENImageModel   *userImageModel;
+
+- (void)fillWithModel:(TENImageModel *)model;
 
 @end

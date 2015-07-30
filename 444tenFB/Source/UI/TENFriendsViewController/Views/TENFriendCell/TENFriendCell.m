@@ -17,10 +17,7 @@
 
 - (void)fillWithModel:(TENUser *)user {
     self.nameLabel.text = user.name;
-    
-    FBSDKProfilePictureView *profilePictureView = self.profileView;
-    profilePictureView.profileID = user.userID;
-    [profilePictureView setNeedsImageUpdate];
+    self.profileView.profileID = user.userID;
 }
 
 @end

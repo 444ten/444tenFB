@@ -9,6 +9,7 @@
 #import "TENLoginView.h"
 
 #import "TENUser.h"
+#import "TENUserView.h"
 
 static NSString * const kLogin  = @"Log in";
 static NSString * const kLogout = @"Log out";
@@ -27,8 +28,7 @@ static NSString * const kLogout = @"Log out";
     self.firstNameLabel.text = model.firstName;
     self.lastNameLabel.text = model.lastName;
     self.userID.text = model.userID;
-
-    self.profilePictureView.profileID = model.userID;
+    self.userView.userImageModel = model.imageModel ;
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "TENModel.h"
 
+@class TENImageModel;
 @class TENOrderedModel;
 
 @interface TENUser : TENModel
@@ -15,6 +16,8 @@
 @property (nonatomic, copy)     NSString        *firstName;
 @property (nonatomic, copy)     NSString        *lastName;
 @property (nonatomic, copy)     NSString        *name;
+@property (nonatomic, strong)   NSURL           *pictureURL;
+@property (nonatomic, readonly) TENImageModel   *imageModel;
 @property (nonatomic, strong)   TENOrderedModel *friends;
 
 @end

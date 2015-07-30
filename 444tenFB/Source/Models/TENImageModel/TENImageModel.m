@@ -152,8 +152,6 @@ static NSString * const kTENFailImageName   = @"cat.jpg";
 #pragma mark Overloading
 
 - (void)performLoadingInBackground {
-    TENUSleep(1000*1000 + 1000 * arc4random_uniform(1000));
-    
     if (self.isFileAvailable) {
         self.image = [UIImage imageWithContentsOfFile:self.filePath];
     } else {

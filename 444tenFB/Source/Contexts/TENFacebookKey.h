@@ -18,3 +18,5 @@ static NSString * const kTENID          = @"id";
 static NSString * const kTENName        = @"name";
 static NSString * const kTENFirstName   = @"first_name";
 static NSString * const kTENLastName    = @"last_name";
+static NSString * const kTENPicture     = @"picture";
+static NSString * const kTENUrl         = @"url";
