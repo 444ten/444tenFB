@@ -11,7 +11,8 @@
 #import "TENFacebookKeys.h"
 #import "TENUser.h"
 
-static NSString * const kTENGraphPath   = @"me?fields=id,first_name,last_name,picture";
+static NSString * const kTENGraphPathFormat     = @"me?fields=id,first_name,last_name,picture.width(%lu)";
+static const NSUInteger TENDefaultPictureWidth  = 50;
 
 @interface TENFacebookUserContext ()
 @property (nonatomic, readonly) TENUser *user;
@@ -33,7 +34,13 @@ static NSString * const kTENGraphPath   = @"me?fields=id,first_name,last_name,pi
 #pragma mark Overload
 
 - (NSString *)graphPath {
-    return kTENGraphPath;
+    NSUInteger pictureWidth = self.pictureSize.width;
+    
+    if (0 == pictureWidth) {
+        pictureWidth = TENDefaultPictureWidth;
+    }
+    
+    return [NSString stringWithFormat:kTENGraphPathFormat, pictureWidth];
 }
 
 - (BOOL)parseResult:(NSDictionary *)result {
