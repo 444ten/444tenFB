@@ -89,6 +89,9 @@
 		764EBFEB1B6F86280077BE05 /* IDPMachTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 764EBFBF1B6F86280077BE05 /* IDPMachTimer.m */; };
 		764EBFEC1B6F86280077BE05 /* IDPMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 764EBFC21B6F86280077BE05 /* IDPMath.m */; };
 		764EBFED1B6F86280077BE05 /* IDPObjCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 764EBFC51B6F86280077BE05 /* IDPObjCRuntime.m */; };
+		764EBFF11B6F89180077BE05 /* 444tenFB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 764EBFEF1B6F89180077BE05 /* 444tenFB.xcdatamodeld */; };
+		764EBFFA1B6F939A0077BE05 /* DBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 764EBFF91B6F939A0077BE05 /* DBUser.m */; };
+		764EBFFD1B6F939B0077BE05 /* DBPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 764EBFFC1B6F939B0077BE05 /* DBPicture.m */; };
 		7661353A1B6521BB001903FE /* TENView.m in Sources */ = {isa = PBXBuildFile; fileRef = 766135391B6521BB001903FE /* TENView.m */; };
 		766135441B652530001903FE /* TENViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766135431B652530001903FE /* TENViewController.m */; };
 		E9DAB54A61E2FDFFCF46A2A3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B09605898B49FD20C0C78A3B /* libPods.a */; };
@@ -273,6 +276,11 @@
 		764EBFC41B6F86280077BE05 /* IDPObjCRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPObjCRuntime.h; sourceTree = "<group>"; };
 		764EBFC51B6F86280077BE05 /* IDPObjCRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDPObjCRuntime.m; sourceTree = "<group>"; };
 		764EBFC61B6F86280077BE05 /* IDPUtilityMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDPUtilityMacros.h; sourceTree = "<group>"; };
+		764EBFF01B6F89180077BE05 /* 444tenFB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 444tenFB.xcdatamodel; sourceTree = "<group>"; };
+		764EBFF81B6F939A0077BE05 /* DBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBUser.h; sourceTree = "<group>"; };
+		764EBFF91B6F939A0077BE05 /* DBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBUser.m; sourceTree = "<group>"; };
+		764EBFFB1B6F939B0077BE05 /* DBPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPicture.h; sourceTree = "<group>"; };
+		764EBFFC1B6F939B0077BE05 /* DBPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBPicture.m; sourceTree = "<group>"; };
 		766135381B6521BB001903FE /* TENView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENView.h; sourceTree = "<group>"; };
 		766135391B6521BB001903FE /* TENView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENView.m; sourceTree = "<group>"; };
 		766135421B652530001903FE /* TENViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENViewController.h; sourceTree = "<group>"; };
@@ -413,6 +421,7 @@
 		6C613F0C1B5AD79F001C0F23 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				764EBFEE1B6F87000077BE05 /* CoreData */,
 				6C0829C61B6A3B8500DFEE03 /* TENImageModel */,
 				6C613FE11B602FBD001C0F23 /* TENModel */,
 				6C613FB01B5E6FAC001C0F23 /* TENUser */,
@@ -1093,6 +1102,18 @@
 			path = IDPObjCRuntime;
 			sourceTree = "<group>";
 		};
+		764EBFEE1B6F87000077BE05 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				764EBFEF1B6F89180077BE05 /* 444tenFB.xcdatamodeld */,
+				764EBFFB1B6F939B0077BE05 /* DBPicture.h */,
+				764EBFFC1B6F939B0077BE05 /* DBPicture.m */,
+				764EBFF81B6F939A0077BE05 /* DBUser.h */,
+				764EBFF91B6F939A0077BE05 /* DBUser.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		766135361B6521A8001903FE /* TENView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1283,8 +1304,10 @@
 				6CF9BB241B62345A00D409EC /* TENFacebookContext.m in Sources */,
 				6C0829D01B6A3DA100DFEE03 /* TENUserView.m in Sources */,
 				764EBFE31B6F86280077BE05 /* IDPCopyReference.m in Sources */,
+				764EBFFD1B6F939B0077BE05 /* DBPicture.m in Sources */,
 				764EBFC91B6F86280077BE05 /* NSManagedObjectContext+IDPExtensions.m in Sources */,
 				6C613F341B5AD8BB001C0F23 /* UIViewController+TENExtensions.m in Sources */,
+				764EBFF11B6F89180077BE05 /* 444tenFB.xcdatamodeld in Sources */,
 				6C0829CD1B6A3BE500DFEE03 /* TENObjectCache.m in Sources */,
 				6C613FDA1B60220F001C0F23 /* TENLoginView.m in Sources */,
 				6C613FA51B5BE7F2001C0F23 /* TENObservableObject.m in Sources */,
@@ -1294,6 +1317,7 @@
 				6C613FE81B603BCE001C0F23 /* TENThread.m in Sources */,
 				764EBFD91B6F86280077BE05 /* IDPMixinContext.m in Sources */,
 				6C613FBC1B5FC7E9001C0F23 /* TENLoginContext.m in Sources */,
+				764EBFFA1B6F939A0077BE05 /* DBUser.m in Sources */,
 				6CF9BB1E1B61295300D409EC /* TENFriendCell.m in Sources */,
 				6C613F3E1B5ADAAD001C0F23 /* TENTestViewController.m in Sources */,
 				6C613F2D1B5AD8BB001C0F23 /* NSBundle+TENExtensions.m in Sources */,
@@ -1552,6 +1576,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		764EBFEF1B6F89180077BE05 /* 444tenFB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				764EBFF01B6F89180077BE05 /* 444tenFB.xcdatamodel */,
+			);
+			currentVersion = 764EBFF01B6F89180077BE05 /* 444tenFB.xcdatamodel */;
+			path = 444tenFB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6C613ECF1B5AD490001C0F23 /* Project object */;
 }

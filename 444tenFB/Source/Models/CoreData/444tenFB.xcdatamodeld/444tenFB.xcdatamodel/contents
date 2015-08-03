@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DBPicture" representedClassName="DBPicture" syncable="YES">
+        <attribute name="path" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DBUser" inverseName="picture" inverseEntity="DBUser" syncable="YES"/>
+    </entity>
+    <entity name="DBUser" representedClassName="DBUser" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" attributeType="String" syncable="YES"/>
+        <relationship name="friends" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DBUser" inverseName="friends" inverseEntity="DBUser" syncable="YES"/>
+        <relationship name="picture" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="DBPicture" inverseName="user" inverseEntity="DBPicture" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DBUser" positionX="-272" positionY="-24" width="128" height="118"/>
+        <element name="DBPicture" positionX="-20" positionY="18" width="128" height="73"/>
+    </elements>
+</model>
