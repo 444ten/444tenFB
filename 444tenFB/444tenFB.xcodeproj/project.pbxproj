@@ -96,6 +96,8 @@
 		766135441B652530001903FE /* TENViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766135431B652530001903FE /* TENViewController.m */; };
 		76DA579C1B73325400B2F8F9 /* TENSizeClassTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DA579A1B73325400B2F8F9 /* TENSizeClassTestViewController.m */; };
 		76DA579D1B73325400B2F8F9 /* TENSizeClassTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76DA579B1B73325400B2F8F9 /* TENSizeClassTestViewController.xib */; };
+		76EF54871B73664800733288 /* TENConstraintsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EF54851B73664800733288 /* TENConstraintsViewController.m */; };
+		76EF54881B73664800733288 /* TENConstraintsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76EF54861B73664800733288 /* TENConstraintsViewController.xib */; };
 		E9DAB54A61E2FDFFCF46A2A3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B09605898B49FD20C0C78A3B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -290,6 +292,9 @@
 		76DA57991B73325400B2F8F9 /* TENSizeClassTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENSizeClassTestViewController.h; sourceTree = "<group>"; };
 		76DA579A1B73325400B2F8F9 /* TENSizeClassTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENSizeClassTestViewController.m; sourceTree = "<group>"; };
 		76DA579B1B73325400B2F8F9 /* TENSizeClassTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TENSizeClassTestViewController.xib; sourceTree = "<group>"; };
+		76EF54841B73664800733288 /* TENConstraintsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENConstraintsViewController.h; sourceTree = "<group>"; };
+		76EF54851B73664800733288 /* TENConstraintsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENConstraintsViewController.m; sourceTree = "<group>"; };
+		76EF54861B73664800733288 /* TENConstraintsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TENConstraintsViewController.xib; sourceTree = "<group>"; };
 		99F80E15D91D3AFD99A641FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B09605898B49FD20C0C78A3B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -614,6 +619,7 @@
 		6C613F9F1B5BE776001C0F23 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				76EF54831B73663000733288 /* TENConstraints */,
 				76DA57981B73322C00B2F8F9 /* TENSizeClassTest */,
 				6C613FA91B5C0017001C0F23 /* TSTFriendView */,
 			);
@@ -1148,6 +1154,16 @@
 			path = TENSizeClassTest;
 			sourceTree = "<group>";
 		};
+		76EF54831B73663000733288 /* TENConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				76EF54841B73664800733288 /* TENConstraintsViewController.h */,
+				76EF54851B73664800733288 /* TENConstraintsViewController.m */,
+				76EF54861B73664800733288 /* TENConstraintsViewController.xib */,
+			);
+			path = TENConstraints;
+			sourceTree = "<group>";
+		};
 		8CBA02FE8C497FE6CED50C45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1258,6 +1274,7 @@
 				6C613FD71B602186001C0F23 /* TENLoginViewController.xib in Resources */,
 				6C613F081B5AD715001C0F23 /* LaunchScreen.xib in Resources */,
 				76DA579D1B73325400B2F8F9 /* TENSizeClassTestViewController.xib in Resources */,
+				76EF54881B73664800733288 /* TENConstraintsViewController.xib in Resources */,
 				6CF9BB201B61296500D409EC /* TENFriendCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1314,6 +1331,7 @@
 				764EBFCA1B6F86280077BE05 /* NSManagedObjectID+IDPExtensions.m in Sources */,
 				6C613F321B5AD8BB001C0F23 /* UITableView+TENExtensions.m in Sources */,
 				6C613FD61B602186001C0F23 /* TENLoginViewController.m in Sources */,
+				76EF54871B73664800733288 /* TENConstraintsViewController.m in Sources */,
 				764EBFE11B6F86280077BE05 /* IDPMutableDictionary.m in Sources */,
 				764EBFEC1B6F86280077BE05 /* IDPMath.m in Sources */,
 				764EBFE61B6F86280077BE05 /* IDPUnsafeReference.m in Sources */,

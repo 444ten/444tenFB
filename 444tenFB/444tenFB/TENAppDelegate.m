@@ -16,6 +16,7 @@
 #import "TENLoginViewController.h"
 
 #import "TENSizeClassTestViewController.h"
+#import "TENConstraintsViewController.h"
 
 @interface TENAppDelegate ()
 
@@ -45,7 +46,9 @@
     UIWindow *window = [UIWindow window];
     self.window = window;
     
-    TENSizeClassTestViewController *controller = [TENSizeClassTestViewController controller];
+    //    TENSizeClassTestViewController *controller = [TENSizeClassTestViewController controller];
+        TENConstraintsViewController *controller = [TENConstraintsViewController controller];
+
     
     window.rootViewController = controller;
     [window makeKeyAndVisible];

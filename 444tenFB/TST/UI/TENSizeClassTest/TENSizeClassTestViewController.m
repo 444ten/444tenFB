@@ -15,11 +15,11 @@
 
 @implementation TENSizeClassTestViewController
 
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    
+//- (void)viewWillLayoutSubviews {
+//    [super viewWillLayoutSubviews];
+//    
 //    [self configureView];
-}
+//}
 
 #pragma mark -
 #pragma mark Private
