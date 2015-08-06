@@ -94,6 +94,8 @@
 		764EBFFD1B6F939B0077BE05 /* DBPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 764EBFFC1B6F939B0077BE05 /* DBPicture.m */; };
 		7661353A1B6521BB001903FE /* TENView.m in Sources */ = {isa = PBXBuildFile; fileRef = 766135391B6521BB001903FE /* TENView.m */; };
 		766135441B652530001903FE /* TENViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766135431B652530001903FE /* TENViewController.m */; };
+		76DA579C1B73325400B2F8F9 /* TENSizeClassTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DA579A1B73325400B2F8F9 /* TENSizeClassTestViewController.m */; };
+		76DA579D1B73325400B2F8F9 /* TENSizeClassTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76DA579B1B73325400B2F8F9 /* TENSizeClassTestViewController.xib */; };
 		E9DAB54A61E2FDFFCF46A2A3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B09605898B49FD20C0C78A3B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -285,6 +287,9 @@
 		766135391B6521BB001903FE /* TENView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENView.m; sourceTree = "<group>"; };
 		766135421B652530001903FE /* TENViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENViewController.h; sourceTree = "<group>"; };
 		766135431B652530001903FE /* TENViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENViewController.m; sourceTree = "<group>"; };
+		76DA57991B73325400B2F8F9 /* TENSizeClassTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TENSizeClassTestViewController.h; sourceTree = "<group>"; };
+		76DA579A1B73325400B2F8F9 /* TENSizeClassTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TENSizeClassTestViewController.m; sourceTree = "<group>"; };
+		76DA579B1B73325400B2F8F9 /* TENSizeClassTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TENSizeClassTestViewController.xib; sourceTree = "<group>"; };
 		99F80E15D91D3AFD99A641FA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B09605898B49FD20C0C78A3B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -609,6 +614,7 @@
 		6C613F9F1B5BE776001C0F23 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				76DA57981B73322C00B2F8F9 /* TENSizeClassTest */,
 				6C613FA91B5C0017001C0F23 /* TSTFriendView */,
 			);
 			path = UI;
@@ -1132,6 +1138,16 @@
 			path = TENViewController;
 			sourceTree = "<group>";
 		};
+		76DA57981B73322C00B2F8F9 /* TENSizeClassTest */ = {
+			isa = PBXGroup;
+			children = (
+				76DA57991B73325400B2F8F9 /* TENSizeClassTestViewController.h */,
+				76DA579A1B73325400B2F8F9 /* TENSizeClassTestViewController.m */,
+				76DA579B1B73325400B2F8F9 /* TENSizeClassTestViewController.xib */,
+			);
+			path = TENSizeClassTest;
+			sourceTree = "<group>";
+		};
 		8CBA02FE8C497FE6CED50C45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1241,6 +1257,7 @@
 				6C613F091B5AD715001C0F23 /* Images.xcassets in Resources */,
 				6C613FD71B602186001C0F23 /* TENLoginViewController.xib in Resources */,
 				6C613F081B5AD715001C0F23 /* LaunchScreen.xib in Resources */,
+				76DA579D1B73325400B2F8F9 /* TENSizeClassTestViewController.xib in Resources */,
 				6CF9BB201B61296500D409EC /* TENFriendCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1324,6 +1341,7 @@
 				6C613F031B5AD709001C0F23 /* main.m in Sources */,
 				6CF9BB1B1B61291200D409EC /* TENTableViewCell.m in Sources */,
 				764EBFD31B6F86280077BE05 /* NSPathUtilities+IDPExtensions.m in Sources */,
+				76DA579C1B73325400B2F8F9 /* TENSizeClassTestViewController.m in Sources */,
 				764EBFCD1B6F86280077BE05 /* NSFileManager+IDPExtensions.m in Sources */,
 				6CF9BB281B62461C00D409EC /* TENFacebookFriendsContext.m in Sources */,
 				6C0829B91B66784F00DFEE03 /* TENFacebookUserContext.m in Sources */,

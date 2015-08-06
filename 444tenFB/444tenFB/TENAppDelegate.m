@@ -15,27 +15,42 @@
 
 #import "TENLoginViewController.h"
 
+#import "TENSizeClassTestViewController.h"
+
 @interface TENAppDelegate ()
 
 @end
 
 @implementation TENAppDelegate
 
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//    BOOL result = [[FBSDKApplicationDelegate sharedInstance] application:application
+//                                           didFinishLaunchingWithOptions:launchOptions];
+//    
+//    UIWindow *window = [UIWindow window];
+//    self.window = window;
+//    
+//    TENLoginViewController *controller = [TENLoginViewController controller];
+//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
+//    
+//    window.rootViewController = navigationController;
+//    [window makeKeyAndVisible];
+//    
+//    return result;
+//}
+
+// TENSizeClassTest
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    BOOL result = [[FBSDKApplicationDelegate sharedInstance] application:application
-                                           didFinishLaunchingWithOptions:launchOptions];
-    
     UIWindow *window = [UIWindow window];
     self.window = window;
-
-    TENLoginViewController *controller = [TENLoginViewController controller];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
     
-    window.rootViewController = navigationController;
+    TENSizeClassTestViewController *controller = [TENSizeClassTestViewController controller];
+    
+    window.rootViewController = controller;
     [window makeKeyAndVisible];
     
-    return result;
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
